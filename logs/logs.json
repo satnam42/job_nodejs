@@ -1623,3 +1623,64 @@
 {"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-02-10T06:02:57.606Z"}
 {"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-02-10T06:02:57.623Z"}
 {"level":"info","message":"[server:app:boot] took: 0.018 second(s)","timestamp":"2022-02-10T06:02:57.624Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-02-10T07:03:55.539Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.832 second(s)","timestamp":"2022-02-10T07:03:57.369Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-02-10T07:03:57.433Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.002 second(s)","timestamp":"2022-02-10T07:03:57.435Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-02-10T07:03:57.893Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.004 second(s)","timestamp":"2022-02-10T07:03:57.897Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-02-10T07:03:57.899Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-02-10T07:03:57.899Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-02-10T07:03:57.900Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-02-10T07:03:57.917Z"}
+{"level":"info","message":"[server:app:boot] took: 0.019 second(s)","timestamp":"2022-02-10T07:03:57.918Z"}
+{"level":"debug","message":"[permit:context:builder:validators:images:upload] started","timestamp":"2022-02-10T07:10:02.464Z"}
+{"level":"info","message":"[permit:context:builder:validators:images:upload] took: 0.001 second(s)","timestamp":"2022-02-10T07:10:02.465Z"}
+{"level":"debug","message":"[permit:context:builder:api:images:uploadSingle] started","timestamp":"2022-02-10T07:10:02.466Z"}
+{"level":"debug","message":"[permit:context:builder:services:image:upload] started","timestamp":"2022-02-10T07:10:02.467Z"}
+{"message":"[permit:context:builder:api:images:uploadSingle] ","stack":"CastError: Cast to ObjectId failed for value \"wefe\" (type string) at path \"id\" for model \"image\"\n    at model.Query.exec (/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/node_modules/mongoose/lib/query.js:4498:21)\n    at model.Query.Query.then (/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/node_modules/mongoose/lib/query.js:4592:15)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)","stringValue":"\"wefe\"","kind":"ObjectId","value":"wefe","path":"id","reason":{},"valueType":"string","level":"error","timestamp":"2022-02-10T07:10:02.473Z"}
+{"level":"info","message":"[permit:context:builder:api:images:uploadSingle] took: 0.009 second(s)","timestamp":"2022-02-10T07:10:02.475Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-02-10T07:20:44.893Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 2.079 second(s)","timestamp":"2022-02-10T07:20:46.970Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-02-10T07:20:47.021Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.003 second(s)","timestamp":"2022-02-10T07:20:47.024Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-02-10T07:20:47.421Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.005 second(s)","timestamp":"2022-02-10T07:20:47.426Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-02-10T07:20:47.427Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-02-10T07:20:47.428Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-02-10T07:20:47.429Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-02-10T07:20:47.447Z"}
+{"level":"info","message":"[server:app:boot] took: 0.021 second(s)","timestamp":"2022-02-10T07:20:47.448Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-02-10T07:21:12.163Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 2.26 second(s)","timestamp":"2022-02-10T07:21:14.422Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-02-10T07:21:14.486Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.004 second(s)","timestamp":"2022-02-10T07:21:14.489Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-02-10T07:21:14.965Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.005 second(s)","timestamp":"2022-02-10T07:21:14.970Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-02-10T07:21:14.971Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-02-10T07:21:14.972Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-02-10T07:21:14.973Z"}
+{"date":"Thu Feb 10 2022 12:51:14 GMT+0530 (India Standard Time)","process":{"pid":27891,"uid":1000,"gid":1000,"cwd":"/home/mspl/Desktop/humanresource_clone/humanresource_node_backend","execPath":"/usr/bin/node","version":"v14.18.2","argv":["/usr/bin/node","/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js"],"memoryUsage":{"rss":103612416,"heapTotal":76267520,"heapUsed":46002608,"external":23341937,"arrayBuffers":21656675}},"os":{"loadavg":[1.58,1.27,1.11],"uptime":10205.47},"trace":[{"column":16,"file":"net.js","function":"Server.setupListenHandle [as _listen2]","line":1331,"method":"setupListenHandle [as _listen2]","native":false},{"column":12,"file":"net.js","function":"listenInCluster","line":1379,"method":null,"native":false},{"column":7,"file":"net.js","function":"Server.listen","line":1465,"method":"listen","native":false},{"column":10,"file":"/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js","function":"boot","line":46,"method":null,"native":false},{"column":3,"file":"/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js","function":"init","line":62,"method":null,"native":false},{"column":5,"file":"internal/process/task_queues.js","function":"processTicksAndRejections","line":95,"method":null,"native":false}],"stack":["Error: listen EADDRINUSE: address already in use :::9090","    at Server.setupListenHandle [as _listen2] (net.js:1331:16)","    at listenInCluster (net.js:1379:12)","    at Server.listen (net.js:1465:7)","    at boot (/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js:46:10)","    at init (/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js:62:3)","    at processTicksAndRejections (internal/process/task_queues.js:95:5)"],"level":"error","message":"uncaughtException: listen EADDRINUSE: address already in use :::9090","timestamp":"2022-02-10T07:21:14.995Z"}
+{"date":"Thu Feb 10 2022 12:51:14 GMT+0530 (India Standard Time)","process":{"pid":27891,"uid":1000,"gid":1000,"cwd":"/home/mspl/Desktop/humanresource_clone/humanresource_node_backend","execPath":"/usr/bin/node","version":"v14.18.2","argv":["/usr/bin/node","/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js"],"memoryUsage":{"rss":104316928,"heapTotal":76267520,"heapUsed":46127432,"external":23342001,"arrayBuffers":21656699}},"os":{"loadavg":[1.58,1.27,1.11],"uptime":10205.47},"trace":[{"column":16,"file":"net.js","function":"Server.setupListenHandle [as _listen2]","line":1331,"method":"setupListenHandle [as _listen2]","native":false},{"column":12,"file":"net.js","function":"listenInCluster","line":1379,"method":null,"native":false},{"column":7,"file":"net.js","function":"Server.listen","line":1465,"method":"listen","native":false},{"column":10,"file":"/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js","function":"boot","line":46,"method":null,"native":false},{"column":3,"file":"/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js","function":"init","line":62,"method":null,"native":false},{"column":5,"file":"internal/process/task_queues.js","function":"processTicksAndRejections","line":95,"method":null,"native":false}],"stack":["Error: listen EADDRINUSE: address already in use :::9090","    at Server.setupListenHandle [as _listen2] (net.js:1331:16)","    at listenInCluster (net.js:1379:12)","    at Server.listen (net.js:1465:7)","    at boot (/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js:46:10)","    at init (/home/mspl/Desktop/humanresource_clone/humanresource_node_backend/app.js:62:3)","    at processTicksAndRejections (internal/process/task_queues.js:95:5)"],"level":"error","message":"uncaughtException: listen EADDRINUSE: address already in use :::9090","timestamp":"2022-02-10T07:21:14.998Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-02-10T07:21:25.438Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.807 second(s)","timestamp":"2022-02-10T07:21:27.244Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-02-10T07:21:27.295Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.003 second(s)","timestamp":"2022-02-10T07:21:27.298Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-02-10T07:21:27.706Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.005 second(s)","timestamp":"2022-02-10T07:21:27.711Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-02-10T07:21:27.712Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-02-10T07:21:27.713Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-02-10T07:21:27.713Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-02-10T07:21:27.732Z"}
+{"level":"info","message":"[server:app:boot] took: 0.021 second(s)","timestamp":"2022-02-10T07:21:27.733Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-02-10T07:22:48.319Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.839 second(s)","timestamp":"2022-02-10T07:22:50.157Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-02-10T07:22:50.206Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.003 second(s)","timestamp":"2022-02-10T07:22:50.209Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-02-10T07:22:50.617Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.004 second(s)","timestamp":"2022-02-10T07:22:50.621Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-02-10T07:22:50.622Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-02-10T07:22:50.622Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-02-10T07:22:50.623Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-02-10T07:22:50.639Z"}
+{"level":"info","message":"[server:app:boot] took: 0.018 second(s)","timestamp":"2022-02-10T07:22:50.640Z"}

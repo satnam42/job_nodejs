@@ -11,7 +11,7 @@
   "keywords": [
     "api"
   ],
-  "author": "Sandeep & Harnam Singh",
+  "author": "Satnam Singh & Harnam Singh",
   "dependencies": {
     "@open-age/logger": "~1.1.0",
     "app-root-path": "^2.1.0",
