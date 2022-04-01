@@ -10,23 +10,23 @@ module.exports = [{
         email: {
             type: "string"
         },
-        firstName: {
+        userName: {
             type: "string"
         },
-        lastName: {
-            type: "string"
-        },
-        avatar: {
-            type: "string"
-        },
+        // lastName: {
+        //     type: "string"
+        // },
+        // avatar: {
+        //     type: "string"
+        // },
         phoneNumber: {
             type: "string"
         },
-        deviceToken: {
-            type: "string"
-        },
-        role: {
-            type: "string"
-        },
+        // deviceToken: {
+        //     type: "string"
+        // },
+        // role: {
+        //     type: "string"
+        // },
     }
 }];

@@ -153,7 +153,7 @@ const configure = (app, logger) => {
 
     app.post(
         "/api/users/forgotPassword",
-        permit.context.validateToken,
+        permit.context.builder,
         api.users.forgotPassword
     );
 
@@ -244,7 +244,7 @@ const configure = (app, logger) => {
 
     app.post(
         "/api/users/socialLogin",
-        permit.context.validateToken,
+        permit.context.builder,
         api.users.socialLogin,
     );
 

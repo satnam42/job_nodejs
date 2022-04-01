@@ -3,33 +3,30 @@ module.exports = [
     {
         name: "userCreate",
         properties: {
-            deviceToken: {
+            userName: {
                 type: "string"
             },
-            firstName: {
-                type: "string"
-            },
-            lastName: {
-                type: "string"
-            },
-            // fullName: {
-            //     type: "string"
-            // },
-            // gender: {
-            //     type: "string"
-            // },
             email: {
                 type: "string"
             },
-            // phoneNo: {
-            //     type: "string"
-            // },
+            companyName: {
+                type: "string"
+            },
             password: {
                 type: "string"
             },
-            // roleType: {
+            roleType: {
+                type: "string"
+            },
+            phoneNumber: {
+                type: "string"
+            },
+            // deviceToken: {
             //     type: "string"
             // },
+
+
+            
             // prefix: {    
             //     type: "string"
             // },

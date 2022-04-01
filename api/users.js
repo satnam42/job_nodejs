@@ -282,7 +282,7 @@ const assignRole = async (req, res) => {
 const socialLogin = async (req, res) => {
     const log = req.context.logger.start("api:users:socialLogin");
     try {
-        const user = await service.socialLogin(req.body, req.context);
+        const user = await service.socialLogin(req.body, req.context); 
         const message = "Register successful"
         log.end();
         return response.authorized(res, message, user);
@@ -309,7 +309,7 @@ exports.newPassword = newPassword;
 exports.uploadImage = uploadImage;
 exports.updateUserStatus = updateUserStatus;
 exports.assignRole = assignRole;
-exports.socialLogin = socialLogin;
+exports.socialLogin = socialLogin; 
 exports.getDeletedUsers = getDeletedUsers;
 exports.getAdminUsers = getAdminUsers;
 exports.recoverUser = recoverUser;

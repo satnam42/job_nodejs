@@ -1,59 +1,61 @@
-module.exports = [{
-    url: "/updateUserStatus/{id}",
-    put: {
-        summary: "Update User Status",
-        description: "Update User",
-        parameters: [{
-            in: "path",
-            type: "string",
-            name: "id",
-            description: "User id",
-            required: true
-        },
-        {
-            in: "body",
-            name: "body",
-            description: "Model of User",
-            required: true,
-            schema: {
-                $ref: "#/definitions/UserStatusUpdate"
-            }
-        }
-        ],
-        responses: {
-            default: {
-                description: "Unexpected error",
-                schema: {
-                    $ref: "#/definitions/Error"
-                }
-            }
-        }
-    }
-}, {
-    url: "/assignRole",
-    put: {
-        summary: "Assign Role to User",
-        description: "Update User",
-        parameters: [{
-            in: "body",
-            name: "body",
-            description: "Model of User",
-            required: true,
-            schema: {
-                $ref: "#/definitions/assignRole"
-            }
-        }
-        ],
-        responses: {
-            default: {
-                description: "Unexpected error",
-                schema: {
-                    $ref: "#/definitions/Error"
-                }
-            }
-        }
-    }
-}, {
+module.exports = [//{
+//     url: "/updateUserStatus/{id}",
+//     put: {
+//         summary: "Update User Status",
+//         description: "Update User",
+//         parameters: [{
+//             in: "path",
+//             type: "string",
+//             name: "id",
+//             description: "User id",
+//             required: true
+//         },
+        // {
+        //     in: "body",
+//             name: "body",
+//             description: "Model of User",
+//             required: true,
+//             schema: {
+//                 $ref: "#/definitions/UserStatusUpdate"
+//             }
+//         }
+//         ],
+//         responses: {
+//             default: {
+//                 description: "Unexpected error",
+//                 schema: {
+//                     $ref: "#/definitions/Error"
+//                 }
+//             }
+//         }
+//     }
+// // }, 
+// {
+//     url: "/assignRole",
+//     put: {
+//         summary: "Assign Role to User",
+//         description: "Update User",
+//         parameters: [{
+//             in: "body",
+//             name: "body",
+//             description: "Model of User",
+//             required: true,
+//             schema: {
+//                 $ref: "#/definitions/assignRole"
+//             }
+//         }
+//         ],
+//         responses: {
+//             default: {
+//                 description: "Unexpected error",
+//                 schema: {
+//                     $ref: "#/definitions/Error"
+//                 }
+//             }
+//         }
+//     }
+// },
+ {
     url: "/register",
     post: {
         summary: "create",
@@ -231,42 +233,42 @@ module.exports = [{
         }
     }
 },
-{
-    url: "/getUsers",
-    get: {
-        summary: "getUsers",
-        description: "Just hit the api without pass any param",
-        parameters: [
-            {
-                in: "header",
-                name: "x-access-token",
-                description: "token to access api",
-                required: true,
-                type: "string"
-            }, {
-                in: 'query',
-                type: "integer",
-                name: 'pageNo',
-                description: 'pageNo',
-                required: true,
-            }, {
-                in: 'query',
-                type: "integer",
-                name: 'pageSize',
-                description: 'pageSize',
-                required: true,
-            }
-        ],
-        responses: {
-            default: {
-                description: "Unexpected error",
-                schema: {
-                    $ref: "#/definitions/Error"
-                }
-            }
-        }
-    }
-},
+// {
+//     url: "/getUsers",
+//     get: {
+//         summary: "getUsers",
+//         description: "Just hit the api without pass any param",
+//         parameters: [
+//             {
+//                 in: "header",
+//                 name: "x-access-token",
+//                 description: "token to access api",
+//                 required: true,
+//                 type: "string"
+//             }, {
+//                 in: 'query',
+//                 type: "integer",
+//                 name: 'pageNo',
+//                 description: 'pageNo',
+//                 required: true,
+//             }, {
+//                 in: 'query',
+//                 type: "integer",
+//                 name: 'pageSize',
+//                 description: 'pageSize',
+//                 required: true,
+//             }
+//         ],
+//         responses: {
+//             default: {
+//                 description: "Unexpected error",
+//                 schema: {
+//                     $ref: "#/definitions/Error"
+//                 }
+//             }
+//         }
+//     }
+// },
 
 {
     url: "/getAllUsers",
@@ -294,50 +296,50 @@ module.exports = [{
 },
 
 
-{
-    url: "/addAdmin",
-    post: {
-        summary: "addAdmin",
-        description: "addAdmin",
-        parameters: [{
-            in: "body",
-            name: "body",
-            description: "admin model",
-            required: true,
-            schema: {
-                $ref: "#/definitions/adminCreate"
-            }
-        }, {
-            in: "header",
-            name: "x-access-token",
-            description: "token to access api",
-            required: true,
-            type: "string"
-        },],
-        responses: {
-            default: {
-                description: "Unexpected error",
-                schema: {
-                    $ref: "#/definitions/Error"
-                }
-            }
-        }
-    }
-},
+// {
+//     url: "/addAdmin",
+//     post: {
+//         summary: "addAdmin",
+//         description: "addAdmin",
+//         parameters: [{
+//             in: "body",
+//             name: "body",
+//             description: "admin model",
+//             required: true,
+//             schema: {
+//                 $ref: "#/definitions/adminCreate"
+//             }
+//         }, {
+//             in: "header",
+//             name: "x-access-token",
+//             description: "token to access api",
+//             required: true,
+//             type: "string"
+//         },],
+//         responses: {
+//             default: {
+//                 description: "Unexpected error",
+//                 schema: {
+//                     $ref: "#/definitions/Error"
+//                 }
+//             }
+//         }
+//     }
+// },
 
-{
-    url: "/getAdminUsers",
-    get: {
-        summary: "getAdminUsers",
-        description: "Just hit the api without pass any param",
-        parameters: [
-            {
-                in: "header",
-                name: "x-access-token",
-                description: "token to access api",
-                required: true,
-                type: "string"
-            },
+// {
+//     url: "/getAdminUsers",
+//     get: {
+//         summary: "getAdminUsers",
+//         description: "Just hit the api without pass any param",
+//         parameters: [
+//             {
+//                 in: "header",
+//                 name: "x-access-token",
+//                 description: "token to access api",
+//                 required: true,
+//                 type: "string"
+            // },
             // }, {
             //     in: 'query',
             //     type: "integer",
@@ -351,94 +353,94 @@ module.exports = [{
             //     description: 'pageSize',
             //     required: true,
             // }
-        ],
-        responses: {
-            default: {
-                description: "Unexpected error",
-                schema: {
-                    $ref: "#/definitions/Error"
-                }
-            }
-        }
-    }
-},
+//         ],
+//         responses: {
+//             default: {
+//                 description: "Unexpected error",
+//                 schema: {
+//                     $ref: "#/definitions/Error"
+//                 }
+//             }
+//         }
+//     }
+// },
 
-{
-    url: "/updateAdmin/{id}",
-    put: {
-        summary: "updateAdmin",
-        description: "updateAdmin",
-        parameters: [{
-            in: "header",
-            name: "x-access-token",
-            description: "token to access api",
-            required: true,
-            type: "string"
-        },
-        {
-            in: "path",
-            type: "string",
-            name: "id",
-            description: "user id",
-            required: true
-        },
-        {
-            in: "body",
-            name: "body",
-            description: "Model of admin update",
-            required: true,
-            schema: {
-                $ref: "#/definitions/adminUpdate"
-            }
-        }
-        ],
-        responses: {
-            default: {
-                description: "Unexpected error",
-                schema: {
-                    $ref: "#/definitions/Error"
-                }
-            }
-        }
-    }
-},
+// {
+//     url: "/updateAdmin/{id}",
+//     put: {
+//         summary: "updateAdmin",
+//         description: "updateAdmin",
+//         parameters: [{
+//             in: "header",
+//             name: "x-access-token",
+//             description: "token to access api",
+//             required: true,
+//             type: "string"
+//         },
+//         {
+//             in: "path",
+//             type: "string",
+//             name: "id",
+//             description: "user id",
+//             required: true
+//         },
+//         {
+//             in: "body",
+//             name: "body",
+//             description: "Model of admin update",
+//             required: true,
+//             schema: {
+//                 $ref: "#/definitions/adminUpdate"
+//             }
+//         }
+//         ],
+//         responses: {
+//             default: {
+//                 description: "Unexpected error",
+//                 schema: {
+//                     $ref: "#/definitions/Error"
+//                 }
+//             }
+//         }
+//     }
+// },
 
-{
-    url: "/getDeletedUsers",
-    get: {
-        summary: "getDeletedUsers",
-        description: "Just hit the api without pass any param",
-        parameters: [
-            {
-                in: "header",
-                name: "x-access-token",
-                description: "token to access api",
-                required: true,
-                type: "string"
-            }, {
-                in: 'query',
-                type: "integer",
-                name: 'pageNo',
-                description: 'pageNo',
-                required: true,
-            }, {
-                in: 'query',
-                type: "integer",
-                name: 'pageSize',
-                description: 'pageSize',
-                required: true,
-            }
-        ],
-        responses: {
-            default: {
-                description: "Unexpected error",
-                schema: {
-                    $ref: "#/definitions/Error"
-                }
-            }
-        }
-    }
-},
+// {
+//     url: "/getDeletedUsers",
+//     get: {
+//         summary: "getDeletedUsers",
+//         description: "Just hit the api without pass any param",
+//         parameters: [
+//             {
+//                 in: "header",
+//                 name: "x-access-token",
+//                 description: "token to access api",
+//                 required: true,
+//                 type: "string"
+//             }, {
+//                 in: 'query',
+//                 type: "integer",
+//                 name: 'pageNo',
+//                 description: 'pageNo',
+//                 required: true,
+//             }, {
+//                 in: 'query',
+//                 type: "integer",
+//                 name: 'pageSize',
+//                 description: 'pageSize',
+//                 required: true,
+//             }
+//         ],
+//         responses: {
+//             default: {
+//                 description: "Unexpected error",
+//                 schema: {
+//                     $ref: "#/definitions/Error"
+//                 }
+//             }
+//         }
+//     }
+// },
 {
     url: "/currentUser/{id}",
     get: {
@@ -469,36 +471,36 @@ module.exports = [{
         }
     }
 },
-{
-    url: "/delete/{id}",
-    delete: {
-        summary: "delete",
-        description: "delete",
-        parameters: [
-            {
-                in: "header",
-                name: "x-access-token",
-                description: "token to access api",
-                required: true,
-                type: "string"
-            },
-            {
-                in: "path",
-                type: "string",
-                name: "id",
-                description: "user id",
-                required: true
-            },],
-        responses: {
-            default: {
-                description: "Unexpected error",
-                schema: {
-                    $ref: "#/definitions/Error"
-                }
-            }
-        }
-    }
-},
+// {
+//     url: "/delete/{id}",
+//     delete: {
+//         summary: "delete",
+//         description: "delete",
+//         parameters: [
+//             {
+//                 in: "header",
+//                 name: "x-access-token",
+//                 description: "token to access api",
+//                 required: true,
+//                 type: "string"
+//             },
+//             {
+//                 in: "path",
+//                 type: "string",
+//                 name: "id",
+//                 description: "user id",
+//                 required: true
+//             },],
+//         responses: {
+//             default: {
+//                 description: "Unexpected error",
+//                 schema: {
+//                     $ref: "#/definitions/Error"
+//                 }
+//             }
+//         }
+//     }
+// },
 {
     url: "/recoverUser/{id}",
     put: {
@@ -569,36 +571,36 @@ module.exports = [{
         }
     }
 },
-{
-    url: "/uploadImage",
-    post: {
-        summary: "uploadImage",
-        description: "uploadImage",
-        parameters: [{
-            in: "formData",
-            type: "string",
-            name: "id",
-            description: "User Id",
-            required: true
-        },
-        {
-            in: "formData",
-            name: "file",
-            type: "file",
-            description: "The profile image to upload.",
-            required: true
-        },
-        ],
-        responses: {
-            default: {
-                description: "Unexpected error",
-                schema: {
-                    $ref: "#/definitions/Error"
-                }
-            }
-        }
-    }
-},
+// {
+//     url: "/uploadImage",
+//     post: {
+//         summary: "uploadImage",
+//         description: "uploadImage",
+//         parameters: [{
+//             in: "formData",
+//             type: "string",
+//             name: "id",
+//             description: "User Id",
+//             required: true
+//         },
+//         {
+//             in: "formData",
+//             name: "file",
+//             type: "file",
+//             description: "The profile image to upload.",
+//             required: true
+//         },
+//         ],
+//         responses: {
+//             default: {
+//                 description: "Unexpected error",
+//                 schema: {
+//                     $ref: "#/definitions/Error"
+//                 }
+//             }
+//         }
+//     }
+// },
 {
     url: "/socialLogin",
     post: {

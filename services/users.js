@@ -5,50 +5,30 @@ const imageUrl = require('config').get('image').url
 const ObjectId = require("mongodb").ObjectID;
 
 //register user
-const buildUser = async (model, context, isAdmin) => {
-    const { deviceToken, role, permission, isSuperAdmin, nav, firstName, lastName, gender, dob, loc, platform, socialLinkId, status, country, address, streetNo, streetName, notes, incomeRange, otp, state, city, zipCode, phoneNumber, email, password, roleId, roleType } = model;
+const buildUser = async (model, context) => {
+    const {userName,email,companyName,password ,phoneNumber,roleType,socialLinkId,platform} = model;
     const log = context.logger.start(`services:users:build${model}`);
 
-    const user = await new db.user({
-        deviceToken: deviceToken,
-        socialLinkId: socialLinkId,
-        loc: loc,
-        // prefix: prefix,
-        platform: platform,
-        phoneNumber: phoneNumber,
-        firstName: firstName,
-        lastName: lastName,
-        dob: dob,
-        gender: gender,
-        isSuperAdmin: isSuperAdmin,
+    const user = await db.user({
+        userName : userName,
         email: email,
-        status: status,
-        notes: notes,
-        incomeRange: incomeRange,
-        address: address,
-        streetNo: streetNo,
-        streetName: streetName,
-        state: state,
-        city: city,
-        country: country,
-        zipCode: zipCode,
-        otp: otp,
-        role: role ? role : '619e100cc84d342e03ba27bc',
-        roleType: roleType? roleType:'client',
+        companyName: companyName,
         password: password,
-        status: status,
-        createdOn: new Date(),
-        updateOn: new Date()
-    }).save();
-    if (isAdmin) {
-        const privilege = await new db.privilege({
-            nav: nav,
-            permission: permission,
-            user: user.id,
-        }).save();
-        user.privileges = privilege.id
-        await user.save()
-    }
+        phoneNumber:phoneNumber, 
+       roleType: roleType,
+       socialLinkId: socialLinkId,
+       platform: platform,
+
+      }).save();
+    // if (isAdmin) {
+    //     const privilege = await new db.privilege({
+    //         nav: nav,
+    //         permission: permission,
+    //         user: user.id,
+    //     }).save();
+    //     user.privileges = privilege.id
+    //     await user.save()
+    // }
     log.end();
     return user;
 };
@@ -61,45 +41,45 @@ const create = async (model, context) => {
         throw new Error("Email already exists");
     }
    
-    if (model.role == 'admin') {
-        model.roleType = model.role
-        const role = await db.role.findOne({ roleType: 'admin' });
-        model.role = role._id
-    } else if (model.role == 'superAdmin') {
-        model.superAdmin = true;
-        model.roleType = model.role
-        const role = await db.role.findOne({ roleType: 'superAdmin' });
-        model.role = role._id
-    } else if (model.role == 'accountant') {
-        model.accountant = true;
-        model.roleType = model.role
-        const role = await db.role.findOne({ roleType: 'accountant' });
-        model.role = role._id
-    }
-    if(model.role=='' && model.role==undefined && model.role=='client'){
-        model.roleType = "client"
-        const role = await db.role.findOne({ roleType: 'client' });
-        model.role = role._id
-    }
+    // if (model.role == 'admin') {
+    //     model.roleType = model.role
+    //     const role = await db.role.findOne({ roleType: 'admin' });
+    //     model.role = role._id
+    // } else if (model.role == 'superAdmin') {
+    //     model.superAdmin = true;
+    //     model.roleType = model.role
+    //     const role = await db.role.findOne({ roleType: 'superAdmin' });
+    //     model.role = role._id
+    // } else if (model.role == 'accountant') {
+    //     model.accountant = true;
+    //     model.roleType = model.role
+    //     const role = await db.role.findOne({ roleType: 'accountant' });
+    //     model.role = role._id
+    // }
+    // if(model.role=='' && model.role==undefined && model.role=='client'){
+    //     model.roleType = "client"
+    //     const role = await db.role.findOne({ roleType: 'client' });
+    //     model.role = role._id
+    // }
     model.password = encrypt.getHash(model.password, context);
-    let user
-    if (context.user && context.user.id) {
-        user = buildUser(model, context, true);
-    } else {
-        user = buildUser(model, context, false);
-    }
+    // let user 
+    // if (context.user && context.user.id) {
+        // user = buildUser(model, context, true);
+    // } else {
+      const  user = buildUser(model, context);
+    // }
     log.end();
     return user;
 };
 
 const setUser = async (model, user, context) => {
     const log = context.logger.start("services:users:set");
-    if (model.firstName !== "string" && model.firstName !== undefined && model.firstName !== 'active') {
-        user.firstName = model.firstName;
+    if (model.userName !== "string" && model.userName !== undefined && model.userName !== 'active') {
+        user.userName = model.userName;
     }
 
-    if (model.lastName !== "string" && model.lastName !== undefined) {
-        user.lastName = model.lastName;
+    if (model.companyName !== "string" && model.companyName !== undefined) {
+        user.companyName = model.companyName;
     }
 
     if (model.phoneNumber !== "string" && model.phoneNumber !== undefined) {
@@ -211,8 +191,7 @@ const login = async (model, context) => {
 
     const query = {};
     query.email = model.email;
-    query.isDeleted = "false";
-    let user = await db.user.findOne(query).populate('privileges');
+    let user = await db.user.findOne(query)
     if (!user) {
         log.end();
         throw new Error("user not found");
@@ -220,7 +199,7 @@ const login = async (model, context) => {
 
     if (user.status === 'inactive') {
         throw new Error("user Is inactive please contect with admin");
-    }
+    } 
     const isMatched = encrypt.compareHash(model.password, user.password, context);
     if (!isMatched) {
         log.end();
@@ -501,7 +480,7 @@ const sendOtp = async (user, context) => {
     for (let i = 0; i < 4; i++) {
         OTP += digits[Math.floor(Math.random() * 10)];
     }
-    let message = `hi ${user.firstName} Your 4 digit One Time Password: <br>${OTP}<br></br>
+    let message = `hi ${user.Name} Your 4 digit One Time Password: <br>${OTP}<br></br>
       otp valid only 4 minutes`
     let subject = "One Time Password"
     const isEmailSent = await sendMail(user.email, message, subject)
@@ -577,8 +556,8 @@ const sendMail = async (email, message, subject) => {
     var smtpTrans = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: `emmieandrewwork@gmail.com`,
-            pass: `lhbxxjikhpslyxvu`
+            user: `dummydata720@gmail.com`,
+            pass: `data1234@`
         }
     });
     // email send to registered email
