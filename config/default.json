@@ -10,7 +10,7 @@
     "webServer": {
         "url": "http://93.188.167.68:9090/",
         "port": 9090
-    },
+    },    
     "stripe": {
         "public": "",
         "private": ""
