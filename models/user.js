@@ -7,6 +7,7 @@ const user = mongoose.Schema({
     password : {type:String, required:false, trim:true, default:""},
     phoneNumber: { type: String, required: false, trim: true, default: "" },
     // role: { type: mongoose.Schema.Types.ObjectId, ref: 'role' },
+    image: { type: String, default: "" },
     roleType: {
         type: String, trim: true,required:false ,
         default:"employee",

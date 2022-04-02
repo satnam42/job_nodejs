@@ -212,7 +212,7 @@ const login = async (model, context) => {
     user.updatedOn = new Date();
     await user.save();
     log.end();
-    user.image = imageUrl + '/' + user.image
+    // user.image = imageUrl + '/' + user.image
     return user;
 };
 
@@ -325,6 +325,7 @@ const currentUser = async (id, model, context) => {
         throw new Error("user not found");
     }
     log.end();
+     user.image = imageUrl + '/' + user.image
     return user;
 };
 
@@ -480,7 +481,7 @@ const sendOtp = async (user, context) => {
     for (let i = 0; i < 4; i++) {
         OTP += digits[Math.floor(Math.random() * 10)];
     }
-    let message = `hi ${user.Name} Your 4 digit One Time Password: <br>${OTP}<br></br>
+    let message = `hi ${user.name} Your 4 digit One Time Password: <br>${OTP}<br></br>
       otp valid only 4 minutes`
     let subject = "One Time Password"
     const isEmailSent = await sendMail(user.email, message, subject)
@@ -504,10 +505,10 @@ const otpVerifyAndChangePassword = async (model, token, context) => {
     if (otpDetail.otp !== undefined && otpDetail.otp != model.otp) {
         throw new Error("please enter valid otp");
     }
-    if (otpDetail.otp.name === "TokenExpiredError") {
+    if (otpDetail.name === "TokenExpiredError") {
         throw new Error("otp expired");
     }
-    if (otpDetail.otp.name === "JsonWebTokenError") {
+    if (otpDetail.name === "JsonWebTokenError") {
         throw new Error("otp is invalid");
     }
     let user = context.user;
