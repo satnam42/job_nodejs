@@ -581,7 +581,7 @@ const sendMail = async (email, message, subject) => {
 }
 
 const uploadImage = async (files, body, context) => {
-    const log = context.logger.start(`services:users:uploadImage`);
+   const log = context.logger.start(`services:users:uploadImage`);
     if (!files) {
         throw new Error("image not found");
     }
@@ -589,7 +589,7 @@ const uploadImage = async (files, body, context) => {
     if (!user) {
         throw new Error("user not found");
     }
-    if (user.image != "" && user.image !== undefined) {
+    if (user.image !== "" && user.image !== undefined) {
 
         let picUrl = user.image.replace(`${imageUrl}`, '');
         try {

@@ -571,36 +571,36 @@ module.exports = [//{
         }
     }
 },
-// {
-//     url: "/uploadImage",
-//     post: {
-//         summary: "uploadImage",
-//         description: "uploadImage",
-//         parameters: [{
-//             in: "formData",
-//             type: "string",
-//             name: "id",
-//             description: "User Id",
-//             required: true
-//         },
-//         {
-//             in: "formData",
-//             name: "file",
-//             type: "file",
-//             description: "The profile image to upload.",
-//             required: true
-//         },
-//         ],
-//         responses: {
-//             default: {
-//                 description: "Unexpected error",
-//                 schema: {
-//                     $ref: "#/definitions/Error"
-//                 }
-//             }
-//         }
-//     }
-// },
+{
+    url: "/uploadImage",
+    post: {
+        summary: "uploadImage",
+        description: "uploadImage",
+        parameters: [{
+            in: "formData",
+            type: "string",
+            name: "id",
+            description: "User Id",
+            required: true
+        },
+        {
+            in: "formData",
+            name: "file",
+            type: "file",
+            description: "The profile image to upload.",
+            required: true
+        },
+        ],
+        responses: {
+            default: {
+                description: "Unexpected error",
+                schema: {
+                    $ref: "#/definitions/Error"
+                }
+            }
+        }
+    }
+},
 {
     url: "/socialLogin",
     post: {
