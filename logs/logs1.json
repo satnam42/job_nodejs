@@ -1562,3 +1562,111 @@
 {"level":"debug","message":"[permit:context:builder:services:users:currentUser] started","timestamp":"2022-04-05T04:55:54.997Z"}
 {"level":"info","message":"[permit:context:builder:services:users:currentUser] took: 0.015 second(s)","timestamp":"2022-04-05T04:55:55.012Z"}
 {"level":"info","message":"[permit:context:builder:api:users:currentUser] took: 0.024 second(s)","timestamp":"2022-04-05T04:55:55.020Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-04-06T05:11:47.074Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 0.486 second(s)","timestamp":"2022-04-06T05:11:47.556Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-04-06T05:11:47.929Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.074 second(s)","timestamp":"2022-04-06T05:11:48.003Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-04-06T05:11:49.593Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.008 second(s)","timestamp":"2022-04-06T05:11:49.601Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-04-06T05:11:49.604Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-04-06T05:11:49.606Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-04-06T05:11:49.609Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-04-06T05:11:49.646Z"}
+{"level":"info","message":"[server:app:boot] took: 0.046 second(s)","timestamp":"2022-04-06T05:11:49.650Z"}
+{"level":"debug","message":"[permit:context:builder:validators:users:login] started","timestamp":"2022-04-06T05:12:45.870Z"}
+{"level":"info","message":"[permit:context:builder:validators:users:login] took: 0.004 second(s)","timestamp":"2022-04-06T05:12:45.874Z"}
+{"level":"debug","message":"[permit:context:builder:api:users:login] started","timestamp":"2022-04-06T05:12:45.879Z"}
+{"level":"debug","message":"[permit:context:builder:services:users:login] started","timestamp":"2022-04-06T05:12:45.884Z"}
+{"level":"debug","message":"[permit:context:builder:permit:crypto:compareHash] started","timestamp":"2022-04-06T05:12:45.951Z"}
+{"level":"info","message":"[permit:context:builder:permit:crypto:compareHash] took: 0.109 second(s)","timestamp":"2022-04-06T05:12:46.060Z"}
+{"level":"debug","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] started","timestamp":"2022-04-06T05:12:46.064Z"}
+{"level":"info","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] took: 0.007 second(s)","timestamp":"2022-04-06T05:12:46.071Z"}
+{"level":"info","message":"[permit:context:builder:services:users:login] took: 0.213 second(s)","timestamp":"2022-04-06T05:12:46.098Z"}
+{"level":"info","message":"[permit:context:builder:api:users:login] took: 0.221 second(s)","timestamp":"2022-04-06T05:12:46.100Z"}
+{"level":"debug","message":"[permit:context:builder:validators:users:login] started","timestamp":"2022-04-06T05:16:07.842Z"}
+{"level":"info","message":"[permit:context:builder:validators:users:login] took: 0.001 second(s)","timestamp":"2022-04-06T05:16:07.844Z"}
+{"level":"debug","message":"[permit:context:builder:api:users:login] started","timestamp":"2022-04-06T05:16:07.846Z"}
+{"level":"debug","message":"[permit:context:builder:services:users:login] started","timestamp":"2022-04-06T05:16:07.848Z"}
+{"level":"debug","message":"[permit:context:builder:permit:crypto:compareHash] started","timestamp":"2022-04-06T05:16:07.865Z"}
+{"level":"info","message":"[permit:context:builder:permit:crypto:compareHash] took: 0.11 second(s)","timestamp":"2022-04-06T05:16:07.975Z"}
+{"level":"debug","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] started","timestamp":"2022-04-06T05:16:07.980Z"}
+{"level":"info","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] took: 0.003 second(s)","timestamp":"2022-04-06T05:16:07.983Z"}
+{"level":"info","message":"[permit:context:builder:services:users:login] took: 0.151 second(s)","timestamp":"2022-04-06T05:16:07.999Z"}
+{"level":"info","message":"[permit:context:builder:api:users:login] took: 0.157 second(s)","timestamp":"2022-04-06T05:16:08.003Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-04-06T05:16:42.451Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 0.217 second(s)","timestamp":"2022-04-06T05:16:42.666Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-04-06T05:16:42.921Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.01 second(s)","timestamp":"2022-04-06T05:16:42.931Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-04-06T05:16:43.985Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.009 second(s)","timestamp":"2022-04-06T05:16:43.994Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-04-06T05:16:43.997Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-04-06T05:16:43.998Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-04-06T05:16:44.000Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-04-06T05:16:44.031Z"}
+{"level":"info","message":"[server:app:boot] took: 0.042 second(s)","timestamp":"2022-04-06T05:16:44.039Z"}
+{"level":"debug","message":"[permit:context:builder:validators:users:login] started","timestamp":"2022-04-06T05:16:51.352Z"}
+{"level":"info","message":"[permit:context:builder:validators:users:login] took: 0.003 second(s)","timestamp":"2022-04-06T05:16:51.355Z"}
+{"level":"debug","message":"[permit:context:builder:api:users:login] started","timestamp":"2022-04-06T05:16:51.358Z"}
+{"level":"debug","message":"[permit:context:builder:services:users:login] started","timestamp":"2022-04-06T05:16:51.360Z"}
+{"level":"debug","message":"[permit:context:builder:permit:crypto:compareHash] started","timestamp":"2022-04-06T05:16:51.422Z"}
+{"level":"info","message":"[permit:context:builder:permit:crypto:compareHash] took: 0.146 second(s)","timestamp":"2022-04-06T05:16:51.568Z"}
+{"level":"debug","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] started","timestamp":"2022-04-06T05:16:51.572Z"}
+{"level":"info","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] took: 0.007 second(s)","timestamp":"2022-04-06T05:16:51.579Z"}
+{"level":"info","message":"[permit:context:builder:services:users:login] took: 0.248 second(s)","timestamp":"2022-04-06T05:16:51.608Z"}
+{"level":"info","message":"[permit:context:builder:api:users:login] took: 0.252 second(s)","timestamp":"2022-04-06T05:16:51.610Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-04-06T05:18:18.091Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 0.305 second(s)","timestamp":"2022-04-06T05:18:18.394Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-04-06T05:18:18.673Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.01 second(s)","timestamp":"2022-04-06T05:18:18.684Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-04-06T05:18:19.651Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.008 second(s)","timestamp":"2022-04-06T05:18:19.658Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-04-06T05:18:19.676Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-04-06T05:18:19.678Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-04-06T05:18:19.680Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-04-06T05:18:19.706Z"}
+{"level":"info","message":"[server:app:boot] took: 0.036 second(s)","timestamp":"2022-04-06T05:18:19.713Z"}
+{"level":"debug","message":"[permit:context:builder:validators:users:login] started","timestamp":"2022-04-06T05:18:25.316Z"}
+{"level":"info","message":"[permit:context:builder:validators:users:login] took: 0.002 second(s)","timestamp":"2022-04-06T05:18:25.319Z"}
+{"level":"debug","message":"[permit:context:builder:api:users:login] started","timestamp":"2022-04-06T05:18:25.323Z"}
+{"level":"debug","message":"[permit:context:builder:services:users:login] started","timestamp":"2022-04-06T05:18:25.324Z"}
+{"message":"[permit:context:builder:api:users:login] ","stack":"ObjectParameterError: Parameter \"filter\" to findOne() must be an object, got pankaj@gmail.com\n    at model.Query.Query.findOne (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:2321:16)\n    at Function.findOne (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\model.js:2267:13)\n    at Object.login (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\services\\users.js:195:30)\n    at login (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\api\\users.js:25:36)\n    at Layer.handle [as handle_request] (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at login (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\validators\\users.js:67:12)\n    at Layer.handle [as handle_request] (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at builder (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\permit\\context.js:15:16)\n    at Layer.handle [as handle_request] (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\express\\lib\\router\\index.js:341:12)","level":"error","timestamp":"2022-04-06T05:18:25.334Z"}
+{"level":"info","message":"[permit:context:builder:api:users:login] took: 0.026 second(s)","timestamp":"2022-04-06T05:18:25.349Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-04-06T07:57:04.900Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 0.25 second(s)","timestamp":"2022-04-06T07:57:05.149Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-04-06T07:57:05.424Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.014 second(s)","timestamp":"2022-04-06T07:57:05.438Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-04-06T07:57:06.407Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.005 second(s)","timestamp":"2022-04-06T07:57:06.412Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-04-06T07:57:06.415Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-04-06T07:57:06.417Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-04-06T07:57:06.419Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-04-06T07:57:06.445Z"}
+{"level":"info","message":"[server:app:boot] took: 0.033 second(s)","timestamp":"2022-04-06T07:57:06.448Z"}
+{"level":"debug","message":"[permit:context:builder:validators:users:login] started","timestamp":"2022-04-06T07:57:29.437Z"}
+{"level":"info","message":"[permit:context:builder:validators:users:login] took: 0.005 second(s)","timestamp":"2022-04-06T07:57:29.442Z"}
+{"level":"debug","message":"[permit:context:builder:api:users:login] started","timestamp":"2022-04-06T07:57:29.448Z"}
+{"level":"debug","message":"[permit:context:builder:services:users:login] started","timestamp":"2022-04-06T07:57:29.451Z"}
+{"level":"debug","message":"[permit:context:builder:permit:crypto:compareHash] started","timestamp":"2022-04-06T07:57:29.545Z"}
+{"level":"info","message":"[permit:context:builder:permit:crypto:compareHash] took: 0.225 second(s)","timestamp":"2022-04-06T07:57:29.770Z"}
+{"level":"debug","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] started","timestamp":"2022-04-06T07:57:29.773Z"}
+{"level":"info","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] took: 0.007 second(s)","timestamp":"2022-04-06T07:57:29.780Z"}
+{"level":"info","message":"[permit:context:builder:services:users:login] took: 0.363 second(s)","timestamp":"2022-04-06T07:57:29.814Z"}
+{"level":"info","message":"[permit:context:builder:api:users:login] took: 0.369 second(s)","timestamp":"2022-04-06T07:57:29.817Z"}
+{"level":"debug","message":"[permit:context:builder:validators:users:login] started","timestamp":"2022-04-06T07:58:36.230Z"}
+{"level":"info","message":"[permit:context:builder:validators:users:login] took: 0.002 second(s)","timestamp":"2022-04-06T07:58:36.232Z"}
+{"level":"debug","message":"[permit:context:builder:api:users:login] started","timestamp":"2022-04-06T07:58:36.237Z"}
+{"level":"debug","message":"[permit:context:builder:services:users:login] started","timestamp":"2022-04-06T07:58:36.238Z"}
+{"level":"debug","message":"[permit:context:builder:permit:crypto:compareHash] started","timestamp":"2022-04-06T07:58:36.250Z"}
+{"level":"info","message":"[permit:context:builder:permit:crypto:compareHash] took: 0.113 second(s)","timestamp":"2022-04-06T07:58:36.365Z"}
+{"level":"debug","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] started","timestamp":"2022-04-06T07:58:36.368Z"}
+{"level":"info","message":"[permit:context:builder:permit:auth:getToken:62468e87f627516310b7f156] took: 0.002 second(s)","timestamp":"2022-04-06T07:58:36.370Z"}
+{"level":"info","message":"[permit:context:builder:services:users:login] took: 0.147 second(s)","timestamp":"2022-04-06T07:58:36.385Z"}
+{"level":"info","message":"[permit:context:builder:api:users:login] took: 0.151 second(s)","timestamp":"2022-04-06T07:58:36.388Z"}
+{"level":"debug","message":"[permit:context:builder:permit:auth:validateToken] started","timestamp":"2022-04-06T07:59:12.291Z"}
+{"level":"debug","message":"[permit:context:builder:permit:auth:requiresToken:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ2OGU4N2Y2Mjc1MTYzMTBiN2YxNTYiLCJpYXQiOjE2NDkyMzE5MTZ9.FmjVO8uWdUCDs8ZtLFxzZ07iNRFWMusYSFq44a7THnw] started","timestamp":"2022-04-06T07:59:12.292Z"}
+{"level":"info","message":"[permit:context:builder:permit:auth:requiresToken:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ2OGU4N2Y2Mjc1MTYzMTBiN2YxNTYiLCJpYXQiOjE2NDkyMzE5MTZ9.FmjVO8uWdUCDs8ZtLFxzZ07iNRFWMusYSFq44a7THnw] took: 0.007 second(s)","timestamp":"2022-04-06T07:59:12.299Z"}
+{"level":"info","message":"[permit:context:builder:permit:auth:validateToken] took: 0.038 second(s)","timestamp":"2022-04-06T07:59:12.330Z"}
+{"level":"debug","message":"[permit:context:builder:api:users:currentUser] started","timestamp":"2022-04-06T07:59:12.333Z"}
+{"level":"debug","message":"[permit:context:builder:services:users:currentUser] started","timestamp":"2022-04-06T07:59:12.334Z"}
+{"level":"info","message":"[permit:context:builder:services:users:currentUser] took: 0.007 second(s)","timestamp":"2022-04-06T07:59:12.342Z"}
+{"level":"info","message":"[permit:context:builder:api:users:currentUser] took: 0.018 second(s)","timestamp":"2022-04-06T07:59:12.351Z"}
