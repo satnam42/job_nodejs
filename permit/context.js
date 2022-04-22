@@ -1,7 +1,7 @@
 "use strict";
 const auth = require("./auth");
 const response = require("../exchange/response");
-const role = require("../models/role");
+// const role = require("../models/role");
 
 const builder = (req, res, next) => {
 

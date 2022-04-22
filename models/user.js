@@ -17,8 +17,8 @@ const user = mongoose.Schema({
         },
    socialLinkId: { type: String, default: "", required: false },
    platform: { type: String, default: "", required: false },
-//    token: { type: String, default: "" },
-//   deviceToken: { type: String, default: "" },
+   token: { type: String, default: "" },
+//    deviceToken: { type: String, default: "" },
 
     },
 

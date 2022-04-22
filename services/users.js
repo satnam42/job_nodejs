@@ -1,6 +1,7 @@
 const encrypt = require("../permit/crypto.js");
 const auth = require("../permit/auth");
-var nodemailer = require('nodemailer')
+var nodemailer = require('nodemailer');
+const user = require("../models/user.js");
 const imageUrl = require('config').get('image').url
 const ObjectId = require("mongodb").ObjectID;
 
@@ -18,6 +19,7 @@ const buildUser = async (model, context) => {
        roleType: roleType,
        socialLinkId: socialLinkId,
        platform: platform,
+       
 
       }).save();
     // if (isAdmin) {
@@ -208,9 +210,11 @@ const login = async (model, context) => {
 
     const token = auth.getToken(user.id, false, context);
     user.token = token;
+    console.log(token);
     user.deviceToken = model.deviceToken;
     user.updatedOn = new Date();
     await user.save();
+    console.log(user);
     log.end();
     // user.image = imageUrl + '/' + user.image
     return user;

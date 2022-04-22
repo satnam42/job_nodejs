@@ -1,7 +1,7 @@
 "use strict";
 
 const user = require('../models/user');
-// const imageUrl = require('config').get('image').url
+
 
 
 exports.toModel = entity => {
