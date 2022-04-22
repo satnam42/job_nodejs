@@ -1,6 +1,6 @@
 {
     "db": {
-        "url": "mongodb://127.0.0.1:27017",
+        "url": "mongodb://human:Exit##4040@93.188.167.68:33017",
         "database": "humanResource"
     },
     "app": {

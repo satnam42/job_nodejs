@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const configure = async logger => {
   const log = logger.start(`settings:database:configure`);
   try {
-    await mongoose.connect(dbConfig.url + "/" + dbConfig.database + '?authSource=admin', {
+    await mongoose.connect(dbConfig.url + "/" + dbConfig.database , {
       useNewUrlParser: true
     });
     console.log(`mongoose default connection is open to ${dbConfig.url}`);
