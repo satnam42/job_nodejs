@@ -131,6 +131,21 @@ const deleteJobs = async (req, res) => {
 
 
 
+const jobsFilter = async (req, res) => {
+    const log = req.context.logger.start(`api:jobs:Filter`);
+    try {
+        const jobFilter = await service.jobsFilter(req.query, req.context);
+        const message = "fetch filter data";
+        log.end();
+        return response.success(res, message, jobFilter);
+    } catch (err) {
+        log.error(err);
+        log.end();
+        return response.failure(res, err.message);
+    }
+};
+
+
 
 
 
@@ -142,3 +157,4 @@ exports.uploadDocs = uploadDocs;
 exports.getPopularJobs = getPopularJobs;
 exports.update = update;
 exports.deleteJobs = deleteJobs;
+exports.jobsFilter = jobsFilter;

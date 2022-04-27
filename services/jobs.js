@@ -1,21 +1,24 @@
 "use strict"
 const ObjectId = require("mongodb").ObjectID;
 const fs = require("fs");
+const { model } = require("mongoose");
 const { resourceLimits } = require("worker_threads");
 const imageUrl = require('config').get('image').url
 
 
 const buildjob = async (model, context) => {
-    const { user, title, category, location, price, workers, firstName, lastName, email, country,
+    const { user, title, category, location, priceFrom,priceTo, workers, jobType, firstName, lastName, email, country,
         userId, scopeOfWork, planOfAction, constructionDocumentation, company } = model;
     const log = context.logger.start(`services:jobs:build${model}`);
     const job = await new db.job({
         user: userId,
         title: title,
-        category: category,   
+        category: category,
         location: location,
-        price: price,
+        priceFrom: priceFrom,
+        priceTo:priceTo,
         workers: workers,
+        jobType: jobType,
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -48,7 +51,7 @@ const getJobs = async (id, context) => {
     let job = await db.job.findById(id);
     log.end();
     job.constructionDocumentation = imageUrl + '/' + job.constructionDocumentation;
-   
+
     return job;
 };
 
@@ -132,8 +135,12 @@ const setJObs = (model, job, context) => {
     }
 
 
-    if (model.price !== "string" && model.price !== undefined) {
-        job.price = model.price;
+    if (model.priceFrom !== "string" && model.priceFrom !== undefined) {
+        job.priceFrom = model.priceFrom;
+    }
+
+    if (model.priceTo !== "string" && model.priceTo !== undefined) {
+        job.priceTo = model.priceTo;
     }
 
     if (model.workers !== "string" && model.workers !== undefined) {
@@ -200,16 +207,16 @@ const update = async (id, model, context) => {
 
 // job delete
 
-const deleteJobs = async(id,context)=>{
+const deleteJobs = async (id, context) => {
     const log = context.logger.start(`services:jobs:deleteJobs`);
-    
-    if(!id){
+
+    if (!id) {
         throw new Error('id is required');
     }
-    
-    let job = await db.job.deleteOne({_id:id})
 
-    if(!job){
+    let job = await db.job.deleteOne({ _id: id })
+
+    if (!job) {
         throw new Error("job not found");
     }
     return 'job deleted successfully'
@@ -218,17 +225,76 @@ const deleteJobs = async(id,context)=>{
 
 
 
+const jobsFilter = async (Query, context) => {
+    const log = context.logger.start("service:jobs:Filter");
+    console.log(Query);
+    console.log(Query.category.length)
+    console.log(Query.pricefrom);
+
+    // console.log(query);
+
+    const category = Query.category;
+    let query = {};
+
+    if (category.length > 0) {
+        query.category = category;
+    }
+    if (Query.jobType.length > 0) {
+        const jobArray = Query.jobType.split(",");
+        query.jobType = [...jobArray]
+    }
+    if (Query.location.length > 0) {
+        const jobloc = Query.location.split(',');
+        query.location = [...jobloc]
+    }
+    if (Query.priceFrom.length > 0) {
+        const prcfrom = Query.priceFrom.split(',');
+        query.priceFrom = [...prcfrom]
+    }
+    if (Query.priceTo.length > 0) {
+        const prcto = Query.priceTo.split(',');
+        query.priceTo = [...prcto]
+    }
 
 
 
-// const jobFilter = async (query, context) => {
-//     const log = context.logger.start(`services:jobs:getAllJobs`);
-//     let filter = await db.job.find({
-        
-//     });
-//     log.end();
-//     return alljob;
-// };
+
+
+
+
+
+
+
+
+
+    
+    // if (Query.priceFrom.length > 0 && Query.priceTo.length > 0) {
+
+    //     // query["price.from"] = {
+    //     //     $gte: Query.priceFrom,
+    //     // }
+    //     // query["price.to"] = {
+    //     //     $lte: Query.priceTo
+    //     // }
+    // }
+
+    console.log(query)
+
+
+
+
+
+
+
+
+
+
+
+    const jobs = await db.job.find(query);
+    console.log(jobs)
+    log.end();
+    return jobs;
+}
 
 
 
@@ -254,3 +320,4 @@ exports.uploadDocs = uploadDocs;
 exports.getPopularJobs = getPopularJobs;
 exports.update = update;
 exports.deleteJobs = deleteJobs;
+exports.jobsFilter = jobsFilter;

@@ -96,6 +96,14 @@ app.delete(
     api.jobs.deleteJobs
 );
 
+app.post(
+    "/api/jobs/jobsFilter",
+    permit.context.builder,
+    // validator.roles.create,
+    api.jobs.jobsFilter
+);
+
+
 
 
 

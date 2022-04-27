@@ -11,6 +11,7 @@ module.exports = [{
         },
         location: { type: "string" },
         workers: { type: "number" },
+        jobType:{type:"string"},
         firstName: { type: "string" },
         lastName: { type: "string" },
         email: { type: "string" },

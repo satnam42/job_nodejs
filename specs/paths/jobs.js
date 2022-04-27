@@ -235,14 +235,49 @@ module.exports = [
     }
 },
 
+{
+    url: "/jobsFilter",
+    post: {
+        summary: "filter",
+        description: "filter",
+        parameters: [{
+            in: "query",
+            name: "category",
+            required: true,
+        },{
+            in: "query",
+            name: "jobType",
+            required: true,
+        },
+        {
+            in: "query",
+            name: "location",
+            required: true,
+        },
+        {
+            in: "query",
+            name: "priceFrom",
+            required: true,
+        },
+        {
+            in: "query",
+            name: "priceTo",
+            required: true,
+        },
+      
 
+    ],
 
-
-
-
-
-
-
+        responses: {
+            default: {
+                description: "Unexpected error",
+                schema: {
+                    $ref: "#/definitions/Error"
+                }
+            }
+        }
+    },
+},
 
 
 
