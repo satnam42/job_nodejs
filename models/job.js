@@ -12,10 +12,7 @@ const job = mongoose.Schema({
 
     priceFrom:{ type: Number, required: true, default: 0, },
     priceTo:{ type: Number, required: true, default: 0, },
-    // price: {
-    //     from: { type: Number, required: true, default: 0, },
-    //     to: { type: Number, required: true, default: 0, },
-    // },
+  
     workers: { type: Number, required: true, default: 0, },
     jobType: { type: String, required: true, default: "", },
     firstName: { type: String, required: true, default: "", },
