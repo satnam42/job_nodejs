@@ -7,16 +7,16 @@ const imageUrl = require('config').get('image').url
 
 
 const buildjob = async (model, context) => {
-    const { user, title, category, location, priceFrom,priceTo, workers, jobType, firstName, lastName, email, country,
+    const { title, categoryId, location, priceFrom, priceTo, workers, jobType, firstName, lastName, email, country,
         userId, scopeOfWork, planOfAction, constructionDocumentation, company } = model;
     const log = context.logger.start(`services:jobs:build${model}`);
     const job = await new db.job({
         user: userId,
         title: title,
-        category: category,
+        category: categoryId,
         location: location,
         priceFrom: priceFrom,
-        priceTo:priceTo,
+        priceTo: priceTo,
         workers: workers,
         jobType: jobType,
         firstName: firstName,
@@ -48,9 +48,8 @@ const create = async (model, context) => {
 
 const getJobs = async (id, context) => {
     const log = context.logger.start(`services:jobs:getJobs`);
-    let job = await db.job.findById(id);
+    let job = await db.job.findById(id).populate("category");
     log.end();
-    job.constructionDocumentation = imageUrl + '/' + job.constructionDocumentation;
 
     return job;
 };
@@ -101,6 +100,7 @@ const uploadDocs = async (files, body, context) => {
     job.constructionDocumentation = image;
     await job.save();
     log.end();
+    job.constructionDocumentation = imageUrl + '/' + job.constructionDocumentation;
     //  job.constructionDocumentation = imageUrl + '/' + job.constructionDocumentation;
 
     return job;
@@ -256,45 +256,41 @@ const jobsFilter = async (Query, context) => {
         query.priceTo = [...prcto]
     }
 
-
-
-
-
-
-
-
-
-
-
-
-    
-    // if (Query.priceFrom.length > 0 && Query.priceTo.length > 0) {
-
-    //     // query["price.from"] = {
-    //     //     $gte: Query.priceFrom,
-    //     // }
-    //     // query["price.to"] = {
-    //     //     $lte: Query.priceTo
-    //     // }
-    // }
-
-    console.log(query)
-
-
-
-
-
-
-
-
-
-
-
     const jobs = await db.job.find(query);
-    console.log(jobs)
+  //  console.log(jobs)
     log.end();
     return jobs;
 }
+
+
+
+// get location api
+
+
+const getAllLocation = async (query, context) => {
+    const log = context.logger.start(`services:jobs:getAllLocation`);
+    //  let allLoc = await db.job.find().distinct('location');
+    let allLoc = await db.job.aggregate([{
+        $group: {_id: null, location: {$addToSet: "$location"}}}])
+        // {
+        //     $group:{
+        //         _id:"$location",
+        //     }  
+        // },
+        // {
+        //     $addFields:{
+        //         location:"$_id"
+        //     }
+        // }
+        // ,{
+        //     $project:{
+        //         _id:0
+        //     }
+        // }
+         
+    log.end();
+    return allLoc;
+};
 
 
 
@@ -321,3 +317,4 @@ exports.getPopularJobs = getPopularJobs;
 exports.update = update;
 exports.deleteJobs = deleteJobs;
 exports.jobsFilter = jobsFilter;
+exports.getAllLocation = getAllLocation;

@@ -3,7 +3,7 @@ module.exports = [
         name: "jobcreate",
         properties: {
             title: { type: "string" },
-            category: { type: "string" },
+            categoryId:{ type: "string" },
             // price: { type:'number'},
             priceFrom: {type:'number' },
             priceTo:{type:'number'},
@@ -23,6 +23,8 @@ module.exports = [
                     emailId: { type: 'string' },
                     phoneNumber: { type: 'string' },
                     address: { type: 'string' },
+                    experience: { type: 'string' },
+                    skills: { type: 'string' },
                 },
             }
         },

@@ -107,6 +107,7 @@ module.exports = [
 },
 
 
+
 {
     url: "/uploadDocs",
     post: {
@@ -279,6 +280,30 @@ module.exports = [
     },
 },
 
+{
+    url: "/getAllLocation",
+    get: {
+        summary: "get all location ",
+        description: "get all location",
+        parameters: [
+            // {
+            //                     in: "path",
+            //                     type: "string",
+            //                     name: "all jobs",
+            //                     description: "all jobs",
+            //                     required: true
+            // }
+        ],
+        responses: {
+            default: {
+                description: "Unexpected error",
+                schema: {
+                    $ref: "#/definitions/Error"
+                }
+            }
+        }
+    }
+},
 
 
 

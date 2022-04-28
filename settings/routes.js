@@ -45,7 +45,6 @@ const configure = (app, logger) => {
  app.post(
     "/api/jobs/create",
     permit.context.builder,
-    // validator.roles.create,
     api.jobs.create
 );
 
@@ -71,37 +70,66 @@ app.get(
 app.post(
     "/api/jobs/uploadDocs",
     permit.context.builder,
-    // validator.roles.create,
     api.jobs.uploadDocs
 );
 
 app.get(
     "/api/jobs/getPopularJobs",
     permit.context.builder,
-    // validator.roles.create,
     api.jobs.getPopularJobs
 );
 
 app.put(
     "/api/jobs/update/:id",
     permit.context.builder,
-    // validator.roles.create,
     api.jobs.update
 );
 
 app.delete(
     "/api/jobs/deleteJobs/:id",
     permit.context.builder,
-    // validator.roles.create,
     api.jobs.deleteJobs
 );
 
 app.post(
     "/api/jobs/jobsFilter",
     permit.context.builder,
-    // validator.roles.create,
     api.jobs.jobsFilter
 );
+
+app.get(
+    "/api/jobs/getAllLocation",
+    permit.context.builder,
+    api.jobs.getAllLocation
+);
+
+
+
+
+// category routes
+
+app.post(
+    "/api/category/create",
+    permit.context.builder,
+    api.category.create
+);
+
+app.get(
+    "/api/category/getAllCategory",
+    permit.context.builder,
+    api.category.getAllCategory
+);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

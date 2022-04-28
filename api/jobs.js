@@ -147,6 +147,23 @@ const jobsFilter = async (req, res) => {
 
 
 
+const getAllLocation = async (req, res) => {
+    const log = req.context.logger.start(`api:jobs:getAllLocation`);
+    try {
+        const allLoc = await service.getAllLocation(req.body, req.context);
+        const message = "all location find";
+        log.end();
+        return response.success(res, message, allLoc);
+    } catch (err) {
+        log.error(err);
+        log.end();
+        return response.failure(res, err.message);
+    }
+};
+
+
+
+
 
 
 exports.create = create;
@@ -158,3 +175,4 @@ exports.getPopularJobs = getPopularJobs;
 exports.update = update;
 exports.deleteJobs = deleteJobs;
 exports.jobsFilter = jobsFilter;
+exports.getAllLocation = getAllLocation;
