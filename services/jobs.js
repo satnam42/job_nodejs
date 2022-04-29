@@ -112,7 +112,7 @@ const uploadDocs = async (files, body, context) => {
 
 const getPopularJobs = async (model, context) => {
     const log = context.logger.start("service:popular:jobs");
-    const popularJobs = await db.job.find({}).sort({ workers: -1 });
+    const popularJobs = await db.job.find({}).sort({ category: -1 });
     log.end();
     return popularJobs
 }
@@ -126,9 +126,6 @@ const setJObs = (model, job, context) => {
         job.title = model.title;
     }
 
-    if (model.category !== "string" && model.category !== undefined) {
-        job.category = model.category;
-    }
 
     if (model.location !== "string" && model.location !== undefined) {
         job.location = model.location;
@@ -227,18 +224,12 @@ const deleteJobs = async (id, context) => {
 
 const jobsFilter = async (Query, context) => {
     const log = context.logger.start("service:jobs:Filter");
-    console.log(Query);
-    console.log(Query.category.length)
-    console.log(Query.pricefrom);
+    // const category = Query.category;
 
-    // console.log(query);
-
-    const category = Query.category;
+    // if (category.length > 0) {
+    //     query.category = category;
+    // }
     let query = {};
-
-    if (category.length > 0) {
-        query.category = category;
-    }
     if (Query.jobType.length > 0) {
         const jobArray = Query.jobType.split(",");
         query.jobType = [...jobArray]
@@ -255,8 +246,8 @@ const jobsFilter = async (Query, context) => {
         const prcto = Query.priceTo.split(',');
         query.priceTo = [...prcto]
     }
-
-    const jobs = await db.job.find(query);
+  
+    const jobs = await db.job.find(query)
   //  console.log(jobs)
     log.end();
     return jobs;
@@ -272,21 +263,6 @@ const getAllLocation = async (query, context) => {
     //  let allLoc = await db.job.find().distinct('location');
     let allLoc = await db.job.aggregate([{
         $group: {_id: null, location: {$addToSet: "$location"}}}])
-        // {
-        //     $group:{
-        //         _id:"$location",
-        //     }  
-        // },
-        // {
-        //     $addFields:{
-        //         location:"$_id"
-        //     }
-        // }
-        // ,{
-        //     $project:{
-        //         _id:0
-        //     }
-        // }
          
     log.end();
     return allLoc;

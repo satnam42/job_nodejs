@@ -6,6 +6,7 @@ const job = mongoose.Schema({
     title: { type: String, required: true, trim: true, default: "", },
     category: {
         type: mongoose.Schema.Types.ObjectId,
+        required: true,
         ref: 'category'
     },
     // location : { type: "Point", coordinates: [longitude, latitude] },

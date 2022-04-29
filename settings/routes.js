@@ -121,6 +121,14 @@ app.get(
 );
 
 
+// job apply routes
+
+
+app.post(
+    "/api/jobApply/create",
+    permit.context.builder,
+    api.jobapply.create
+);
 
 
 

@@ -3,15 +3,11 @@ module.exports = [{
     properties: {
         title: { type: "string" },
         category: { type: "string" },
-        price: {
-            properties: {
-                from: { type: "number"},
-                to: { type: "number" },
-            },
-        },
+        priceFrom: { type: "number" },
+        priceTo: { type: "number" },
         location: { type: "string" },
         workers: { type: "number" },
-        jobType:{type:"string"},
+        jobType: { type: "string" },
         firstName: { type: "string" },
         lastName: { type: "string" },
         email: { type: "string" },

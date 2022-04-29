@@ -19,18 +19,7 @@ const buildUser = async (model, context) => {
        roleType: roleType,
        socialLinkId: socialLinkId,
        platform: platform,
-       
-
       }).save();
-    // if (isAdmin) {
-    //     const privilege = await new db.privilege({
-    //         nav: nav,
-    //         permission: permission,
-    //         user: user.id,
-    //     }).save();
-    //     user.privileges = privilege.id
-    //     await user.save()
-    // }
     log.end();
     return user;
 };
@@ -42,37 +31,14 @@ const create = async (model, context) => {
     if (isEmail) {
         throw new Error("Email already exists");
     }
-   
-    // if (model.role == 'admin') {
-    //     model.roleType = model.role
-    //     const role = await db.role.findOne({ roleType: 'admin' });
-    //     model.role = role._id
-    // } else if (model.role == 'superAdmin') {
-    //     model.superAdmin = true;
-    //     model.roleType = model.role
-    //     const role = await db.role.findOne({ roleType: 'superAdmin' });
-    //     model.role = role._id
-    // } else if (model.role == 'accountant') {
-    //     model.accountant = true;
-    //     model.roleType = model.role
-    //     const role = await db.role.findOne({ roleType: 'accountant' });
-    //     model.role = role._id
-    // }
-    // if(model.role=='' && model.role==undefined && model.role=='client'){
-    //     model.roleType = "client"
-    //     const role = await db.role.findOne({ roleType: 'client' });
-    //     model.role = role._id
-    // }
     model.password = encrypt.getHash(model.password, context);
-    // let user 
-    // if (context.user && context.user.id) {
-        // user = buildUser(model, context, true);
-    // } else {
-      const  user = buildUser(model, context);
-    // }
+    const  user = buildUser(model, context);
     log.end();
     return user;
 };
+
+
+
 
 const setUser = async (model, user, context) => {
     const log = context.logger.start("services:users:set");
@@ -91,99 +57,26 @@ const setUser = async (model, user, context) => {
     if (model.email !== "string" && model.email !== undefined) {
         user.email = model.email;
     }
-
-    if (model.notes !== "string" && model.notes !== undefined) {
-        user.notes = model.notes;
-    }
-
-    if (model.incomeRange !== "string" && model.incomeRange !== undefined) {
-        user.incomeRange = model.incomeRange;
-    }
-
-    if (model.deviceToken !== "string" && model.deviceToken !== undefined) {
-        user.deviceToken = model.deviceToken;
-    }
-
-    if (model.address !== "string" && model.address !== undefined) {
-        user.address = model.address;
-    }
-
-    if (model.streetNo !== "string" && model.streetNo !== undefined) {
-        user.streetNo = model.streetNo;
-    }
-
-    if (model.streetName !== "string" && model.streetName !== undefined) {
-        user.streetName = model.streetName;
-    }
-
-    if (model.state !== "string" && model.state !== undefined) {
-        user.state = model.state;
-    }
-
-    if (model.gender !== "string" && model.gender !== undefined) {
-        user.gender = model.gender;
-    }
-    if (model.city !== "string" && model.city !== undefined) {
-        user.city = model.city;
-    }
-    if (model.country !== "string" && model.country !== undefined) {
-        user.country = model.country;
-    }
-    if (model.zipCode !== "string" && model.zipCode !== undefined) {
-        user.zipCode = model.zipCode;
-    }
-    if (model.status !== "string" && model.status !== undefined) {
-        user.status = model.status;
-    }
-
-    if (model.dob !== "string" && model.dob !== undefined) {
-        user.dob = model.dob;
-    }
-
-    // if (model.roleId !== "string" && model.roleId !== undefined) {
-    //     user.role = model.roleId;
-    // }
-
-    // if (model.role !== undefined && model.role == 'admin' || 'client' || 'superAdmin' || 'accountant') {
-    //     if (model.role == 'admin') {
-    //         user.roleType = model.role
-    //         const role = await db.role.findOne({ roleType: 'admin' });
-    //         user.role = role._id
-    //     } else if (model.role == 'superAdmin') {
-    //         user.roleType = model.role
-    //         const role = await db.role.findOne({ roleType: 'superAdmin' });
-    //         user.role = role._id
-    //     } else if (model.role == 'accountant') {
-    //         user.roleType = model.role
-    //         const role = await db.role.findOne({ roleType: 'accountant' });
-    //         user.role = role._id
-    //     }
-    //     else {
-    //         user.roleType = model.role
-    //         const role = await db.role.findOne({ roleType: 'client' });
-    //         user.role = role._id
-    //     }
-    // }
     log.end();
     await user.save();
     return user;
 
 };
 
-const setRole = (model, user, context) => {
-    const log = context.logger.start("services:users:setRole");
+// const setRole = (model, user, context) => {
+//     const log = context.logger.start("services:users:setRole");
 
-    if (model.roleId !== "string" && model.roleId !== undefined) {
-        user.role = model.roleId;
-    }
-    let role_type = db.role.findOne({ _id: model.roleId });
-    user.roleType = role_type.roleType;
+//     if (model.roleId !== "string" && model.roleId !== undefined) {
+//         user.role = model.roleId;
+//     }
+//     let role_type = db.role.findOne({ _id: model.roleId });
+//     user.roleType = role_type.roleType;
 
-    log.end();
-    user.save();
-    return user;
+//     log.end();
+//     user.save();
+//     return user;
 
-};
+// };
 
 
 // login 
