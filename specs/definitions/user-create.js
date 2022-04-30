@@ -21,28 +21,13 @@ module.exports = [
             phoneNumber: {
                 type: "string"
             },
-            // deviceToken: {
-            //     type: "string"
-            // },
+           
 
 
             
-            // prefix: {    
-            //     type: "string"
-            // },
-            // loc: {
-            //     properties: {
-            //         type: 'array',
-            //         // items: {
-            //         properties: {
-            //             coordinates: { type: 'number' }
-            //         },
+          
 
-            //     }
-            // },
-            // role: {
-            //     type: "string"
-            // },
+          
         },
     }
 

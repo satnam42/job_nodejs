@@ -22,6 +22,38 @@ module.exports = [{
             }
         }
     },
+
+    {
+        url: "/getCategory/{id}",
+        get: {
+            summary: "get category",
+            description: "get category by id",
+            parameters: [
+                // {
+                //     in: "header",
+                //     name: "x-access-token",
+                //     description: "token to access api",
+                //     required: false,
+                //     type: "string"
+                // }
+                {
+                                    in: "path",
+                                    type: "string",
+                                    name: "id",
+                                    description: "job id",
+                                    required: true
+                }
+            ],
+            responses: {
+                default: {
+                    description: "Unexpected error",
+                    schema: {
+                        $ref: "#/definitions/Error"
+                    }
+                }
+            }
+        }
+    },
    
       
     

@@ -18,6 +18,22 @@ const create = async (req, res) => {
 };
 
 
+const getCategory = async (req, res) => {
+    const log = req.context.logger.start(`api:category:getCategory`);
+    try {
+        const getCategory = await service.getCategory(req.params.id, req.context);
+        const message = "get single category";
+        log.end();
+        return response.success(res, message, getCategory);
+    } catch (err) {
+        log.error(err);
+        log.end();
+        return response.failure(res, err.message);
+    }
+};
+
+
+
 const getAllCategory = async (req, res) => {
     const log = req.context.logger.start(`api:category:getAllCategory`);
     try {
@@ -37,4 +53,5 @@ const getAllCategory = async (req, res) => {
 
 
 exports.create = create;
+exports.getCategory = getCategory;
 exports.getAllCategory = getAllCategory;

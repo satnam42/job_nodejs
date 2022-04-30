@@ -241,11 +241,12 @@ module.exports = [
     post: {
         summary: "filter",
         description: "filter",
-         parameters: [//{
-        //     in: "query",
-        //     name: "category",
-        //     required: true,
-        //}
+         parameters: [
+             {
+            in: "query",
+            name: "categoryId",
+            required: true,
+        },
         {
             in: "query",
             name: "jobType",

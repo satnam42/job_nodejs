@@ -59,7 +59,7 @@ const getJobs = async (id, context) => {
 
 const getAllJobs = async (query, context) => {
     const log = context.logger.start(`services:jobs:getAllJobs`);
-    let alljob = await db.job.find();
+    let alljob = await db.job.find().populate("category");
     log.end();
     return alljob;
 };
@@ -112,7 +112,7 @@ const uploadDocs = async (files, body, context) => {
 
 const getPopularJobs = async (model, context) => {
     const log = context.logger.start("service:popular:jobs");
-    const popularJobs = await db.job.find({}).sort({ category: -1 });
+    const popularJobs = await db.job.find({}).sort({ category: -1 }).populate("category");;
     log.end();
     return popularJobs
 }
@@ -220,16 +220,17 @@ const deleteJobs = async (id, context) => {
 };
 
 
-
+// filter jobs
 
 const jobsFilter = async (Query, context) => {
     const log = context.logger.start("service:jobs:Filter");
-    // const category = Query.category;
-
-    // if (category.length > 0) {
-    //     query.category = category;
-    // }
+   const category = Query.categoryId;
     let query = {};
+  
+    if (category.length > 0) {
+        query.category = category;
+    }
+    
     if (Query.jobType.length > 0) {
         const jobArray = Query.jobType.split(",");
         query.jobType = [...jobArray]
@@ -239,15 +240,15 @@ const jobsFilter = async (Query, context) => {
         query.location = [...jobloc]
     }
     if (Query.priceFrom.length > 0) {
-        const prcfrom = Query.priceFrom.split(',');
-        query.priceFrom = [...prcfrom]
+        const prcfrom = Query.priceFrom
+        query.priceFrom =Number(prcfrom)
     }
     if (Query.priceTo.length > 0) {
-        const prcto = Query.priceTo.split(',');
-        query.priceTo = [...prcto]
+        const prcto = Query.priceTo
+        query.priceTo = Number(prcto)
     }
-  
-    const jobs = await db.job.find(query)
+  console.log(query);
+    const jobs = await db.job.find(query).populate('category')
   //  console.log(jobs)
     log.end();
     return jobs;
@@ -255,7 +256,7 @@ const jobsFilter = async (Query, context) => {
 
 
 
-// get location api
+// get  all location 
 
 
 const getAllLocation = async (query, context) => {

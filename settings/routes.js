@@ -114,6 +114,13 @@ app.post(
     api.category.create
 );
 
+
+app.get(
+    "/api/category/getCategory/:id",
+    permit.context.builder,
+    api.category.getCategory
+);
+
 app.get(
     "/api/category/getAllCategory",
     permit.context.builder,
@@ -133,7 +140,13 @@ app.post(
 
 
 
+// wishlist routes
 
+app.post(
+    "/api/wishlist/create",
+    permit.context.builder,
+    api.wishlist.create
+);
 
 
 

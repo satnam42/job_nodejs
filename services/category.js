@@ -27,6 +27,20 @@ const create = async (model, context) => {
 
 };
 
+// get category by id
+
+const getCategory = async (id, context) => {
+    const log = context.logger.start(`services:category:getCategory`);
+    let category = await db.category.findById(id)
+    log.end();
+
+    return category;
+};
+
+
+
+
+
 // getAllCategory
 
 const getAllCategory = async (query, context) => {
@@ -56,3 +70,4 @@ const getAllCategory = async (query, context) => {
 
 exports.create = create;
 exports.getAllCategory = getAllCategory;
+exports.getCategory = getCategory;
