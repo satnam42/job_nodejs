@@ -69,7 +69,7 @@ const getAllJobs = async (query, context) => {
 
 const recentPosts = async (model, context) => {
     const log = context.logger.start("service:recent:posts");
-    const recentPost = await db.job.find({}).sort({ createdOn: -1 });
+    const recentPost = await db.job.find({}).sort({ createdOn: -1 }).populate("category");
     log.end();
     return recentPost;
 }

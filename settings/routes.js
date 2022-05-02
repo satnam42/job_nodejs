@@ -137,6 +137,11 @@ app.post(
     api.jobapply.create
 );
 
+app.get(
+    "/api/jobApply/getAllJobsApply",
+    permit.context.builder,
+    api.jobapply.getAllJobsApply
+);
 
 
 

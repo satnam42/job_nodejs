@@ -23,4 +23,29 @@ module.exports = [
             }
         },
     },
+    {
+        url: "/getAllJobsApply",
+        get: {
+            summary: "getAllJobsApply",
+            description: "Just hit the api without pass any param",
+            parameters: [
+                // {
+                //     in: "header",
+                //     name: "x-access-token",
+                //     description: "token to access api",
+                //     required: true,
+                //     type: "string"
+                // },
+            ],
+            responses: {
+                default: {
+                    description: "Unexpected error",
+                    schema: {
+                        $ref: "#/definitions/Error"
+                    }
+                }
+            }
+        }
+    },
+
 ]

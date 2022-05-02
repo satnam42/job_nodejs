@@ -410,3 +410,84 @@
 {"level":"debug","message":"[permit:context:builder:services:category:getCategory] started","timestamp":"2022-04-30T10:46:46.360Z"}
 {"level":"info","message":"[permit:context:builder:services:category:getCategory] took: 0.34 second(s)","timestamp":"2022-04-30T10:46:46.700Z"}
 {"level":"info","message":"[permit:context:builder:api:category:getCategory] took: 0.345 second(s)","timestamp":"2022-04-30T10:46:46.703Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-02T05:08:59.237Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.554 second(s)","timestamp":"2022-05-02T05:09:00.788Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-02T05:09:00.995Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.011 second(s)","timestamp":"2022-05-02T05:09:01.006Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-02T05:09:01.369Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.005 second(s)","timestamp":"2022-05-02T05:09:01.374Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-02T05:09:01.376Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-02T05:09:01.378Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-02T05:09:01.380Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-02T05:09:01.399Z"}
+{"level":"info","message":"[server:app:boot] took: 0.028 second(s)","timestamp":"2022-05-02T05:09:01.404Z"}
+{"level":"debug","message":"[permit:context:builder:api:jobs:getAllLocation] started","timestamp":"2022-05-02T05:11:40.038Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobs:getAllLocation] started","timestamp":"2022-05-02T05:11:40.040Z"}
+{"level":"info","message":"[permit:context:builder:services:jobs:getAllLocation] took: 0.31 second(s)","timestamp":"2022-05-02T05:11:40.351Z"}
+{"level":"info","message":"[permit:context:builder:api:jobs:getAllLocation] took: 0.317 second(s)","timestamp":"2022-05-02T05:11:40.354Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-02T05:20:13.204Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.09 second(s)","timestamp":"2022-05-02T05:20:14.292Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-02T05:20:14.480Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.009 second(s)","timestamp":"2022-05-02T05:20:14.490Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-02T05:20:14.779Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.005 second(s)","timestamp":"2022-05-02T05:20:14.784Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-02T05:20:14.786Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-02T05:20:14.789Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-02T05:20:14.791Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-02T05:20:14.809Z"}
+{"level":"info","message":"[server:app:boot] took: 0.025 second(s)","timestamp":"2022-05-02T05:20:14.811Z"}
+{"level":"debug","message":"[permit:context:builder:api:recent:posts] started","timestamp":"2022-05-02T05:20:35.594Z"}
+{"level":"debug","message":"[permit:context:builder:service:recent:posts] started","timestamp":"2022-05-02T05:20:35.596Z"}
+{"level":"info","message":"[permit:context:builder:service:recent:posts] took: 0.653 second(s)","timestamp":"2022-05-02T05:20:36.249Z"}
+{"level":"info","message":"[permit:context:builder:api:recent:posts] took: 0.657 second(s)","timestamp":"2022-05-02T05:20:36.252Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-02T05:44:01.856Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.068 second(s)","timestamp":"2022-05-02T05:44:02.923Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-02T05:44:03.021Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.005 second(s)","timestamp":"2022-05-02T05:44:03.026Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-02T05:44:03.202Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.003 second(s)","timestamp":"2022-05-02T05:44:03.205Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-02T05:44:03.206Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-02T05:44:03.208Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-02T05:44:03.209Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-02T05:44:03.217Z"}
+{"level":"info","message":"[server:app:boot] took: 0.013 second(s)","timestamp":"2022-05-02T05:44:03.219Z"}
+{"level":"debug","message":"[permit:context:builder:validators:users:login] started","timestamp":"2022-05-02T05:45:37.208Z"}
+{"level":"info","message":"[permit:context:builder:validators:users:login] took: 0.005 second(s)","timestamp":"2022-05-02T05:45:37.213Z"}
+{"level":"debug","message":"[permit:context:builder:api:users:login] started","timestamp":"2022-05-02T05:45:37.216Z"}
+{"level":"debug","message":"[permit:context:builder:services:users:login] started","timestamp":"2022-05-02T05:45:37.217Z"}
+{"level":"debug","message":"[permit:context:builder:permit:crypto:compareHash] started","timestamp":"2022-05-02T05:45:37.553Z"}
+{"level":"info","message":"[permit:context:builder:permit:crypto:compareHash] took: 0.087 second(s)","timestamp":"2022-05-02T05:45:37.640Z"}
+{"level":"debug","message":"[permit:context:builder:permit:auth:getToken:626bdb3af290135988987ac5] started","timestamp":"2022-05-02T05:45:37.642Z"}
+{"level":"info","message":"[permit:context:builder:permit:auth:getToken:626bdb3af290135988987ac5] took: 0.004 second(s)","timestamp":"2022-05-02T05:45:37.646Z"}
+{"level":"info","message":"[permit:context:builder:services:users:login] took: 0.787 second(s)","timestamp":"2022-05-02T05:45:38.004Z"}
+{"level":"info","message":"[permit:context:builder:api:users:login] took: 0.79 second(s)","timestamp":"2022-05-02T05:45:38.006Z"}
+{"level":"debug","message":"[permit:context:builder:api:jobs:getAllJobs] started","timestamp":"2022-05-02T05:47:27.781Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobs:getAllJobs] started","timestamp":"2022-05-02T05:47:27.782Z"}
+{"level":"info","message":"[permit:context:builder:services:jobs:getAllJobs] took: 0.696 second(s)","timestamp":"2022-05-02T05:47:28.478Z"}
+{"level":"info","message":"[permit:context:builder:api:jobs:getAllJobs] took: 0.7 second(s)","timestamp":"2022-05-02T05:47:28.480Z"}
+{"level":"debug","message":"[permit:context:builder:api:jobApply:create] started","timestamp":"2022-05-02T05:49:17.158Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobsApply:create] started","timestamp":"2022-05-02T05:49:17.159Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobsApply:build[object Object]] started","timestamp":"2022-05-02T05:49:17.160Z"}
+{"message":"[permit:context:builder:api:jobApply:create] ","stack":"ValidationError: jobApply validation failed: status: `yes` is not a valid enum value for path `status`.\n    at model.Document.invalidate (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\document.js:2782:32)\n    at C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\document.js:2574:17\n    at C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\schematype.js:1273:9\n    at processTicksAndRejections (node:internal/process/task_queues:78:11)","errors":{"status":{"properties":{"message":"`yes` is not a valid enum value for path `status`.","type":"enum","enumValues":["Yes","No"],"path":"status","value":"yes"},"kind":"enum","path":"status","value":"yes"}},"_message":"jobApply validation failed","level":"error","timestamp":"2022-05-02T05:49:17.167Z"}
+{"level":"info","message":"[permit:context:builder:api:jobApply:create] took: 0.012 second(s)","timestamp":"2022-05-02T05:49:17.170Z"}
+{"level":"debug","message":"[permit:context:builder:api:jobApply:create] started","timestamp":"2022-05-02T05:49:34.851Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobsApply:create] started","timestamp":"2022-05-02T05:49:34.852Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobsApply:build[object Object]] started","timestamp":"2022-05-02T05:49:34.854Z"}
+{"level":"info","message":"[permit:context:builder:services:jobsApply:build[object Object]] took: 0.375 second(s)","timestamp":"2022-05-02T05:49:35.229Z"}
+{"level":"info","message":"[permit:context:builder:services:jobsApply:create] took: 0.379 second(s)","timestamp":"2022-05-02T05:49:35.231Z"}
+{"level":"info","message":"[permit:context:builder:api:jobApply:create] took: 0.381 second(s)","timestamp":"2022-05-02T05:49:35.233Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-02T06:06:48.418Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.189 second(s)","timestamp":"2022-05-02T06:06:49.606Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-02T06:06:49.708Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.007 second(s)","timestamp":"2022-05-02T06:06:49.714Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-02T06:06:49.890Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.003 second(s)","timestamp":"2022-05-02T06:06:49.893Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-02T06:06:49.894Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-02T06:06:49.895Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-02T06:06:49.896Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-02T06:06:49.903Z"}
+{"level":"info","message":"[server:app:boot] took: 0.01 second(s)","timestamp":"2022-05-02T06:06:49.904Z"}
+{"level":"debug","message":"[permit:context:builder:api:jobsApply:getAllJobApply] started","timestamp":"2022-05-02T06:07:08.459Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobsApply:getAllJobApply] started","timestamp":"2022-05-02T06:07:08.460Z"}
+{"level":"info","message":"[permit:context:builder:services:jobsApply:getAllJobApply] took: 2.002 second(s)","timestamp":"2022-05-02T06:07:10.462Z"}
+{"level":"info","message":"[permit:context:builder:api:jobsApply:getAllJobApply] took: 2.006 second(s)","timestamp":"2022-05-02T06:07:10.465Z"}

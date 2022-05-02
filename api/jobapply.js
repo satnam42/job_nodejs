@@ -21,6 +21,21 @@ const create = async (req, res) => {
 
 
 
+const getAllJobsApply = async (req, res) => {
+    const log = req.context.logger.start(`api:jobsApply:getAllJobApply`);
+    try {
+        const applyJobs = await service.getAllJobsApply(req.body, req.context);
+        const message = "find all jobs apply";
+        log.end();
+        return response.success(res, message, applyJobs);
+    } catch (err) {
+        log.error(err);
+        log.end();
+        return response.failure(res, err.message);
+    }
+};
+
+
 
 
 
@@ -32,3 +47,5 @@ const create = async (req, res) => {
 
 
 exports.create = create;
+exports.getAllJobsApply = getAllJobsApply;
+
