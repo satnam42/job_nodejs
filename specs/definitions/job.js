@@ -4,6 +4,7 @@ module.exports = [
         properties: {
             title: { type: "string" },
             categoryId:{ type: "string" },
+            userId:{ type: "string"},
             // price: { type:'number'},
             priceFrom: {type:'number' },
             priceTo:{type:'number'},

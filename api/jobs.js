@@ -1,16 +1,16 @@
 "use strict"
 const fs = require('fs');
 const service = require("../services/jobs");
- const response = require("../exchange/response");
+const response = require("../exchange/response");
 
 //create job api
 const create = async (req, res) => {
     const log = req.context.logger.start(`api:jobs:create`);
     try {
-        const job = await service.create(req.body, req.context);
+        const job = await service.create( req.body, req.context);
         const message = "job Created Successfully";
         log.end();
-        return response.success(res, message ,job);
+        return response.success(res, message, job);
     } catch (err) {
         log.error(err);
         log.end();
@@ -57,7 +57,7 @@ const getAllJobs = async (req, res) => {
 const recentPosts = async (req, res) => {
     const log = req.context.logger.start("api:recent:posts");
     try {
-        const recentPost = await service.recentPosts(req.params.id , req.context)
+        const recentPost = await service.recentPosts(req.params.id, req.context)
         log.end();
         return response.data(res, recentPost);
     } catch (err) {
@@ -70,7 +70,7 @@ const recentPosts = async (req, res) => {
 const uploadDocs = async (req, res) => {
     const log = req.context.logger.start(`api:jobs:uploadDocs`);
     try {
-        const job = await service.uploadDocs(req.files, req.body, req.context);
+        const job = await service.uploadDocs(req.params.id, req.files, req.context);
         const message = "files uploaded";
         log.end();
         return response.data(res, message, job);
@@ -91,7 +91,7 @@ const uploadDocs = async (req, res) => {
 const getPopularJobs = async (req, res) => {
     const log = req.context.logger.start("api:popular:jobs");
     try {
-        const popularJobs = await service.getPopularJobs(req.params.id , req.context)
+        const popularJobs = await service.getPopularJobs(req.params.id, req.context)
         log.end();
         return response.data(res, popularJobs);
     } catch (err) {

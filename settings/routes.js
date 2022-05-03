@@ -67,8 +67,8 @@ app.get(
     api.jobs.recentPosts
 );
 
-app.post(
-    "/api/jobs/uploadDocs",
+app.put(
+    "/api/jobs/uploadDocs/:id",
     permit.context.builder,
     api.jobs.uploadDocs
 );
@@ -132,15 +132,21 @@ app.get(
 
 
 app.post(
-    "/api/jobApply/create",
+    "/api/Apply/create",
     permit.context.builder,
-    api.jobapply.create
+    api.apply.create
 );
 
 app.get(
-    "/api/jobApply/getAllJobsApply",
+    "/api/Apply/getJobsApply/:id",
     permit.context.builder,
-    api.jobapply.getAllJobsApply
+    api.apply.getJobsApply
+); 
+
+app.get(
+    "/api/Apply/getAllJobsApply",
+    permit.context.builder,
+    api.apply.getAllJobsApply
 );
 
 

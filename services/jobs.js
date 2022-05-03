@@ -3,6 +3,7 @@ const ObjectId = require("mongodb").ObjectID;
 const fs = require("fs");
 const { model } = require("mongoose");
 const { resourceLimits } = require("worker_threads");
+const pdfUrl = require('config').get('pdf').url
 const imageUrl = require('config').get('image').url
 
 
@@ -36,10 +37,17 @@ const buildjob = async (model, context) => {
 
 const create = async (model, context) => {
     const log = context.logger.start("services:jobs:create");
+
+    let cat = await db.category.findById(model.categoryId);
+    if (!cat) throw new Error("category id is not matched");
+
+    let entity = await db.user.findById(model.userId);
+    if (!entity) throw new Error("user not found")
+
+
     const job = await buildjob(model, context);
     log.end();
     return job;
-
 };
 
 
@@ -48,7 +56,7 @@ const create = async (model, context) => {
 
 const getJobs = async (id, context) => {
     const log = context.logger.start(`services:jobs:getJobs`);
-    let job = await db.job.findById(id).populate("category");
+    let job = await db.job.findById(id).populate(["category", "user"]);
     log.end();
 
     return job;
@@ -59,7 +67,7 @@ const getJobs = async (id, context) => {
 
 const getAllJobs = async (query, context) => {
     const log = context.logger.start(`services:jobs:getAllJobs`);
-    let alljob = await db.job.find().populate("category");
+    let alljob = await db.job.find().populate("category").populate('user');
     log.end();
     return alljob;
 };
@@ -77,12 +85,13 @@ const recentPosts = async (model, context) => {
 
 // upload docs
 
-const uploadDocs = async (files, body, context) => {
+const uploadDocs = async (id, files, context) => {
+    console.log(files[0]);
     const log = context.logger.start(`services:jobs:uploadDocs`);
-    if (!files) {
+    if (!files.length < 0) {
         throw new Error("files not found");
     }
-    let job = await db.job.findById(body.id);
+    let job = await db.job.findById(id);
     if (!job) {
         throw new Error("job not found");
     }
@@ -100,9 +109,12 @@ const uploadDocs = async (files, body, context) => {
     job.constructionDocumentation = image;
     await job.save();
     log.end();
-    job.constructionDocumentation = imageUrl + '/' + job.constructionDocumentation;
-    //  job.constructionDocumentation = imageUrl + '/' + job.constructionDocumentation;
-
+    if (files[0].mimetype == "application/pdf") {
+        job.constructionDocumentation = pdfUrl + '/' + job.constructionDocumentation;
+    }
+    else {
+        job.constructionDocumentation = imageUrl + '/' + job.constructionDocumentation;
+    }
     return job;
 };
 
@@ -224,13 +236,13 @@ const deleteJobs = async (id, context) => {
 
 const jobsFilter = async (Query, context) => {
     const log = context.logger.start("service:jobs:Filter");
-   const category = Query.categoryId;
+    const category = Query.categoryId;
     let query = {};
-  
+
     if (category.length > 0) {
         query.category = category;
     }
-    
+
     if (Query.jobType.length > 0) {
         const jobArray = Query.jobType.split(",");
         query.jobType = [...jobArray]
@@ -241,15 +253,15 @@ const jobsFilter = async (Query, context) => {
     }
     if (Query.priceFrom.length > 0) {
         const prcfrom = Query.priceFrom
-        query.priceFrom =Number(prcfrom)
+        query.priceFrom = Number(prcfrom)
     }
     if (Query.priceTo.length > 0) {
         const prcto = Query.priceTo
         query.priceTo = Number(prcto)
     }
-  console.log(query);
+    console.log(query);
     const jobs = await db.job.find(query).populate('category')
-  //  console.log(jobs)
+    //  console.log(jobs)
     log.end();
     return jobs;
 }
@@ -263,8 +275,9 @@ const getAllLocation = async (query, context) => {
     const log = context.logger.start(`services:jobs:getAllLocation`);
     //  let allLoc = await db.job.find().distinct('location');
     let allLoc = await db.job.aggregate([{
-        $group: {_id: null, location: {$addToSet: "$location"}}}])
-         
+        $group: { _id: null, location: { $addToSet: "$location" } }
+    }])
+
     log.end();
     return allLoc;
 };

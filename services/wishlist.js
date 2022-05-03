@@ -27,4 +27,19 @@ const create = async (model, context) => {
 
 
 
+// const getJobs = async (id, context) => {
+//     const log = context.logger.start(`services:jobs:getJobs`);
+//     let job = await db.wishlist.findById(id).populate("job");
+//     log.end();
+
+//     return job;
+// };
+
+
+
+
+
+
+
+
 exports.create = create;

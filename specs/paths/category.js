@@ -40,7 +40,7 @@ module.exports = [{
                                     in: "path",
                                     type: "string",
                                     name: "id",
-                                    description: "job id",
+                                    description: "category id",
                                     required: true
                 }
             ],
