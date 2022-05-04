@@ -1,6 +1,7 @@
 "use strict"
 const ObjectId = require("mongodb").ObjectID;
 const fs = require("fs");
+const pdfUrl = require('config').get('pdf').url
 
 
 const buildJobApply = async (model, context) => {
@@ -50,10 +51,23 @@ const create = async (model, context) => {
 
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // get single jobs apply
-const getJobsApply = async (id, context) => {
+const getJobsApply = async (user, context) => {
     const log = context.logger.start(`services:Apply:getJobsApply`);
-    let Apply = await db.Apply.findById(id).populate(["user","job","postedBy"])
+     let Apply = await db.Apply.find({user : user}).populate("job")
     log.end();
     return Apply;
 };
@@ -69,9 +83,49 @@ const getAllJobsApply = async (query, context) => {
 };
 
 
+const uploadDocs = async (id, files, context) => {
+    // console.log(files[0]);
+    const log = context.logger.start(`services:jobsApply:uploadDocs`);
+    if (!files.length < 0) {
+        throw new Error("files not found");
+    }
+    let Apply = await db.Apply.findById(id);
+    if (!Apply) {
+        throw new Error("Apply jobs not found");
+    }
+    if (Apply.resume != "" && Apply.resume !== undefined) {
+
+        let picUrl = Apply.resume.replace(`${pdfUrl}`, '');
+        try {
+            await fs.unlinkSync(`${picUrl}`)
+            console.log('File unlinked!');
+        } catch (err) {
+            console.log(err)
+        }
+    }
+    const pdf = files[0].filename
+    Apply.resume = pdf;
+    await Apply.save();
+    log.end();
+    if (files[0].mimetype == "application/pdf") {
+        Apply.resume = pdfUrl + '/' + Apply.resume;
+    }
+    // else {
+    //     job.constructionDocumentation = imageUrl + '/' + job.constructionDocumentation;
+    // }
+    return Apply;
+};
+
+
+
+
+
+
 
 
 
 exports.create = create;
 exports.getJobsApply = getJobsApply;
 exports.getAllJobsApply = getAllJobsApply;
+exports.uploadDocs = uploadDocs;
+

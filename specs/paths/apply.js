@@ -41,7 +41,7 @@ module.exports = [
                     in: "path",
                     type: "string",
                     name: "id",
-                    description: "job apply id",
+                    description: "user id",
                     required: true
                 }
             ],
@@ -81,5 +81,39 @@ module.exports = [
             }
         }
     },
+
+    {
+        url: "/uploadDocs/{id}",
+        put: {
+            summary: "uploadDocs",
+            description: "uploadDocs",
+            parameters: [
+            {
+                in: "formData",
+                name: "file",
+                type: "file",
+                description: " upload docs",
+                required: true
+            },
+            {
+                in: "path",
+                type: "string",
+                name: "id",
+                description: "apply job id",
+                required: true
+            },
+            ],
+            responses: {
+                default: {
+                    description: "Unexpected error",
+                    schema: {
+                        $ref: "#/definitions/Error"
+                    }
+                }
+            }
+        }
+    },
+
+
 
 ]

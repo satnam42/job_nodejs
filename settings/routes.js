@@ -150,6 +150,12 @@ app.get(
 );
 
 
+app.put(
+    "/api/Apply/uploadDocs/:id",
+    permit.context.builder,
+    api.apply.uploadDocs
+);
+
 
 // wishlist routes
 

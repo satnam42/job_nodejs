@@ -52,6 +52,21 @@ const getAllJobsApply = async (req, res) => {
 };
 
 
+const uploadDocs = async (req, res) => {
+    const log = req.context.logger.start(`api:jobsApply:uploadDocs`);
+    try {
+        const Apply = await service.uploadDocs(req.params.id, req.files, req.context);
+        const message = "files uploaded";
+        log.end();
+        return response.data(res, message, Apply);
+
+    } catch (err) {
+        log.error(err);
+        log.end();
+        return response.failure(res, err.message);
+    }
+};
+
 
 
 
@@ -65,5 +80,7 @@ const getAllJobsApply = async (req, res) => {
 exports.create = create;
 exports.getJobsApply = getJobsApply;
 exports.getAllJobsApply = getAllJobsApply;
+exports.uploadDocs = uploadDocs;
+
 
 

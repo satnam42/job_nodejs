@@ -9,7 +9,6 @@ const create = async (req, res) => {
         const message = "category Created Successfully";
         log.end();
         return response.success(res, message ,wishlist);
-        // return response.success(res, message, userMapper.toModel(user));
     } catch (err) {
         log.error(err);
         log.end();

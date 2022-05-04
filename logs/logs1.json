@@ -1,0 +1,124 @@
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 0.023 second(s)","timestamp":"2022-05-04T07:27:31.477Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:27:32.397Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:27:32.399Z"}
+{"message":"[permit:context:builder:api:Apply:getJobApply] ","stack":"CastError: Cast to ObjectId failed for value \"{id}\" (type string) at path \"user\" for model \"Apply\"\n    at model.Query.exec (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4498:21)\n    at model.Query.Query.then (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4592:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"{id}\"","kind":"ObjectId","value":"{id}","path":"user","reason":{},"valueType":"string","level":"error","timestamp":"2022-05-04T07:27:32.402Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 0.01 second(s)","timestamp":"2022-05-04T07:27:32.408Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:27:32.615Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:27:32.616Z"}
+{"message":"[permit:context:builder:api:Apply:getJobApply] ","stack":"CastError: Cast to ObjectId failed for value \"{id}\" (type string) at path \"user\" for model \"Apply\"\n    at model.Query.exec (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4498:21)\n    at model.Query.Query.then (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4592:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"{id}\"","kind":"ObjectId","value":"{id}","path":"user","reason":{},"valueType":"string","level":"error","timestamp":"2022-05-04T07:27:32.623Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 0.014 second(s)","timestamp":"2022-05-04T07:27:32.629Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:27:50.944Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:27:50.946Z"}
+{"message":"[permit:context:builder:api:Apply:getJobApply] ","stack":"CastError: Cast to ObjectId failed for value \"{id}\" (type string) at path \"user\" for model \"Apply\"\n    at model.Query.exec (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4498:21)\n    at model.Query.Query.then (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4592:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"{id}\"","kind":"ObjectId","value":"{id}","path":"user","reason":{},"valueType":"string","level":"error","timestamp":"2022-05-04T07:27:50.950Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 0.011 second(s)","timestamp":"2022-05-04T07:27:50.956Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-04T07:29:18.093Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.691 second(s)","timestamp":"2022-05-04T07:29:19.784Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-04T07:29:19.926Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.008 second(s)","timestamp":"2022-05-04T07:29:19.934Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-04T07:29:20.229Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.005 second(s)","timestamp":"2022-05-04T07:29:20.234Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-04T07:29:20.237Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-04T07:29:20.239Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-04T07:29:20.244Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-04T07:29:20.258Z"}
+{"level":"info","message":"[server:app:boot] took: 0.025 second(s)","timestamp":"2022-05-04T07:29:20.261Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:29:26.442Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:29:26.445Z"}
+{"message":"[permit:context:builder:api:Apply:getJobApply] ","stack":"CastError: Cast to ObjectId failed for value \"{id}\" (type string) at path \"user\" for model \"Apply\"\n    at model.Query.exec (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4498:21)\n    at model.Query.Query.then (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4592:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"{id}\"","kind":"ObjectId","value":"{id}","path":"user","reason":{},"valueType":"string","level":"error","timestamp":"2022-05-04T07:29:26.459Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 0.025 second(s)","timestamp":"2022-05-04T07:29:26.467Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:29:27.483Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:29:27.484Z"}
+{"message":"[permit:context:builder:api:Apply:getJobApply] ","stack":"CastError: Cast to ObjectId failed for value \"{id}\" (type string) at path \"user\" for model \"Apply\"\n    at model.Query.exec (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4498:21)\n    at model.Query.Query.then (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4592:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"{id}\"","kind":"ObjectId","value":"{id}","path":"user","reason":{},"valueType":"string","level":"error","timestamp":"2022-05-04T07:29:27.486Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 0.009 second(s)","timestamp":"2022-05-04T07:29:27.492Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-04T07:29:58.844Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.49 second(s)","timestamp":"2022-05-04T07:30:00.331Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-04T07:30:00.496Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.008 second(s)","timestamp":"2022-05-04T07:30:00.504Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-04T07:30:00.745Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.004 second(s)","timestamp":"2022-05-04T07:30:00.749Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-04T07:30:00.750Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-04T07:30:00.752Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-04T07:30:00.757Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-04T07:30:00.773Z"}
+{"level":"info","message":"[server:app:boot] took: 0.026 second(s)","timestamp":"2022-05-04T07:30:00.776Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:30:05.442Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:30:05.444Z"}
+{"message":"[permit:context:builder:api:Apply:getJobApply] ","stack":"CastError: Cast to ObjectId failed for value \"{id}\" (type string) at path \"user\" for model \"Apply\"\n    at model.Query.exec (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4498:21)\n    at model.Query.Query.then (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4592:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"{id}\"","kind":"ObjectId","value":"{id}","path":"user","reason":{},"valueType":"string","level":"error","timestamp":"2022-05-04T07:30:05.453Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 0.016 second(s)","timestamp":"2022-05-04T07:30:05.458Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:30:39.436Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:30:39.438Z"}
+{"level":"info","message":"[permit:context:builder:services:Apply:getJobsApply] took: 1.808 second(s)","timestamp":"2022-05-04T07:30:41.246Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 1.813 second(s)","timestamp":"2022-05-04T07:30:41.249Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:31:30.121Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:31:30.125Z"}
+{"level":"info","message":"[permit:context:builder:services:Apply:getJobsApply] took: 1.993 second(s)","timestamp":"2022-05-04T07:31:32.117Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 1.998 second(s)","timestamp":"2022-05-04T07:31:32.119Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-04T07:40:31.361Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.637 second(s)","timestamp":"2022-05-04T07:40:32.996Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-04T07:40:33.188Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.015 second(s)","timestamp":"2022-05-04T07:40:33.203Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-04T07:40:33.500Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.004 second(s)","timestamp":"2022-05-04T07:40:33.504Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-04T07:40:33.505Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-04T07:40:33.506Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-04T07:40:33.509Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-04T07:40:33.521Z"}
+{"level":"info","message":"[server:app:boot] took: 0.021 second(s)","timestamp":"2022-05-04T07:40:33.527Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:40:39.651Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:40:39.653Z"}
+{"level":"info","message":"[permit:context:builder:services:Apply:getJobsApply] took: 0.706 second(s)","timestamp":"2022-05-04T07:40:40.359Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getJobApply] took: 0.71 second(s)","timestamp":"2022-05-04T07:40:40.361Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-04T10:39:29.701Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.011 second(s)","timestamp":"2022-05-04T10:39:30.712Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-04T10:39:30.838Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.005 second(s)","timestamp":"2022-05-04T10:39:30.843Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-04T10:39:31.071Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.002 second(s)","timestamp":"2022-05-04T10:39:31.074Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-04T10:39:31.075Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-04T10:39:31.076Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-04T10:39:31.078Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-04T10:39:31.089Z"}
+{"level":"info","message":"[server:app:boot] took: 0.016 second(s)","timestamp":"2022-05-04T10:39:31.091Z"}
+{"level":"debug","message":"[permit:context:builder:api:Apply:getAllJobApply] started","timestamp":"2022-05-04T10:39:58.326Z"}
+{"level":"debug","message":"[permit:context:builder:services:Apply:getAllJobApply] started","timestamp":"2022-05-04T10:39:58.328Z"}
+{"level":"info","message":"[permit:context:builder:services:Apply:getAllJobApply] took: 1.673 second(s)","timestamp":"2022-05-04T10:40:00.001Z"}
+{"level":"info","message":"[permit:context:builder:api:Apply:getAllJobApply] took: 1.677 second(s)","timestamp":"2022-05-04T10:40:00.003Z"}
+{"level":"debug","message":"[permit:context:builder:api:jobsApply:uploadDocs] started","timestamp":"2022-05-04T10:42:15.710Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobsApply:uploadDocs] started","timestamp":"2022-05-04T10:42:15.712Z"}
+{"message":"[permit:context:builder:api:jobsApply:uploadDocs] ","stack":"ReferenceError: job is not defined\n    at Object.uploadDocs (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\services\\apply.js:106:5)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async uploadDocs (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\api\\apply.js:58:23)","level":"error","timestamp":"2022-05-04T10:42:16.037Z"}
+{"level":"info","message":"[permit:context:builder:api:jobsApply:uploadDocs] took: 0.331 second(s)","timestamp":"2022-05-04T10:42:16.041Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-04T10:43:15.869Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.032 second(s)","timestamp":"2022-05-04T10:43:16.901Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-04T10:43:17.003Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.007 second(s)","timestamp":"2022-05-04T10:43:17.009Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-04T10:43:17.189Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.003 second(s)","timestamp":"2022-05-04T10:43:17.192Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-04T10:43:17.193Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-04T10:43:17.194Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-04T10:43:17.196Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-04T10:43:17.206Z"}
+{"level":"info","message":"[server:app:boot] took: 0.015 second(s)","timestamp":"2022-05-04T10:43:17.208Z"}
+{"level":"debug","message":"[permit:context:builder:api:jobsApply:uploadDocs] started","timestamp":"2022-05-04T10:43:22.009Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobsApply:uploadDocs] started","timestamp":"2022-05-04T10:43:22.010Z"}
+{"level":"info","message":"[permit:context:builder:services:jobsApply:uploadDocs] took: 1.621 second(s)","timestamp":"2022-05-04T10:43:23.631Z"}
+{"message":"[permit:context:builder:api:jobsApply:uploadDocs] ","stack":"ReferenceError: pdfUrl is not defined\n    at Object.uploadDocs (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\services\\apply.js:110:24)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async uploadDocs (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\api\\apply.js:58:23)","level":"error","timestamp":"2022-05-04T10:43:23.635Z"}
+{"level":"info","message":"[permit:context:builder:api:jobsApply:uploadDocs] took: 1.629 second(s)","timestamp":"2022-05-04T10:43:23.638Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-04T10:44:37.843Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.068 second(s)","timestamp":"2022-05-04T10:44:38.910Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-04T10:44:38.990Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.005 second(s)","timestamp":"2022-05-04T10:44:38.995Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-04T10:44:39.147Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.004 second(s)","timestamp":"2022-05-04T10:44:39.151Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-04T10:44:39.153Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-04T10:44:39.156Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-04T10:44:39.157Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-04T10:44:39.164Z"}
+{"level":"info","message":"[server:app:boot] took: 0.013 second(s)","timestamp":"2022-05-04T10:44:39.166Z"}
+{"level":"debug","message":"[permit:context:builder:api:jobsApply:uploadDocs] started","timestamp":"2022-05-04T10:44:52.101Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobsApply:uploadDocs] started","timestamp":"2022-05-04T10:44:52.102Z"}
+{"level":"info","message":"[permit:context:builder:services:jobsApply:uploadDocs] took: 0.662 second(s)","timestamp":"2022-05-04T10:44:52.765Z"}
+{"level":"info","message":"[permit:context:builder:api:jobsApply:uploadDocs] took: 0.667 second(s)","timestamp":"2022-05-04T10:44:52.768Z"}
+{"level":"debug","message":"[permit:context:builder:api:jobsApply:uploadDocs] started","timestamp":"2022-05-04T10:45:58.422Z"}
+{"level":"debug","message":"[permit:context:builder:services:jobsApply:uploadDocs] started","timestamp":"2022-05-04T10:45:58.422Z"}
+{"level":"info","message":"[permit:context:builder:services:jobsApply:uploadDocs] took: 1.438 second(s)","timestamp":"2022-05-04T10:45:59.860Z"}
+{"level":"info","message":"[permit:context:builder:api:jobsApply:uploadDocs] took: 1.44 second(s)","timestamp":"2022-05-04T10:45:59.862Z"}
