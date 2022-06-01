@@ -27,23 +27,16 @@ const buildJobApply = async (model, context) => {
 
 const create = async (model, context) => {
     const log = context.logger.start("services:Apply:create");
-
     let job = await db.job.findById(model.jobId);
     console.log(job);
     if (!job) throw new Error("job not found");
-
     let entity = await db.user.findById(model.userId);
     if (!entity) throw new Error("user not found")
     console.log(entity)
-
-     model.postedBy = job.user
-
+    model.postedBy = job.user
     let createdBy = await db.user.findById(model.postedBy);
     console.log(createdBy)
     if (!createdBy) throw new Error("employer not found")
-
-
-
 
     const Apply = await buildJobApply(model, context);
     log.end();
@@ -53,31 +46,16 @@ const create = async (model, context) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// get single jobs apply
-const getJobsApply = async (user, context) => {
-    const log = context.logger.start(`services:Apply:getJobsApply`);
-     let Apply = await db.Apply.find({user : user}).populate("job")
-    log.end();
-    return Apply;
-};
-
-
-
-
 const getAllJobsApply = async (query, context) => {
     const log = context.logger.start(`services:Apply:getAllJobApply`);
     let applyJobs = await db.Apply.find().populate("user").populate("job");
+    log.end();
+    return applyJobs;
+};
+
+const listByUserId = async (id, context) => {
+    const log = context.logger.start(`services:Apply:listByUserId`);
+    let applyJobs = await db.Apply.find({ user: id }).populate("user").populate("job");
     log.end();
     return applyJobs;
 };
@@ -125,7 +103,7 @@ const uploadDocs = async (id, files, context) => {
 
 
 exports.create = create;
-exports.getJobsApply = getJobsApply;
 exports.getAllJobsApply = getAllJobsApply;
 exports.uploadDocs = uploadDocs;
+exports.listByUserId = listByUserId;
 

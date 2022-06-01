@@ -24,11 +24,42 @@ module.exports = [
         },
     },
 
+    // {
+    //     url: "/getJobsApply/{id}",
+    //     get: {
+    //         summary: "get job apply",
+    //         description: "get job apply by id",
+    //         parameters: [
+    //             // {
+    //             //     in: "header",
+    //             //     name: "x-access-token",
+    //             //     description: "token to access api",
+    //             //     required: false,
+    //             //     type: "string"
+    //             // }
+    //             {
+    //                 in: "path",
+    //                 type: "string",
+    //                 name: "id",
+    //                 description: "user id",
+    //                 required: true
+    //             }
+    //         ],
+    //         responses: {
+    //             default: {
+    //                 description: "Unexpected error",
+    //                 schema: {
+    //                     $ref: "#/definitions/Error"
+    //                 }
+    //             }
+    //         }
+    //     }
+    // },
     {
-        url: "/getJobsApply/{id}",
+        url: "/listByUserId/{id}",
         get: {
             summary: "get job apply",
-            description: "get job apply by id",
+            description: "get job apply by user id",
             parameters: [
                 // {
                 //     in: "header",
@@ -88,20 +119,20 @@ module.exports = [
             summary: "uploadDocs",
             description: "uploadDocs",
             parameters: [
-            {
-                in: "formData",
-                name: "file",
-                type: "file",
-                description: " upload docs",
-                required: true
-            },
-            {
-                in: "path",
-                type: "string",
-                name: "id",
-                description: "apply job id",
-                required: true
-            },
+                {
+                    in: "formData",
+                    name: "file",
+                    type: "file",
+                    description: " upload docs",
+                    required: true
+                },
+                {
+                    in: "path",
+                    type: "string",
+                    name: "id",
+                    description: "apply job id",
+                    required: true
+                },
             ],
             responses: {
                 default: {

@@ -143,9 +143,9 @@ const configure = (app, logger) => {
     );
 
     app.get(
-        "/api/Apply/getJobsApply/:id",
+        "/api/Apply/listByUserId/:id",
         permit.context.builder,
-        api.apply.getJobsApply
+        api.apply.listByUserId
     );
 
     app.get(
@@ -168,6 +168,13 @@ const configure = (app, logger) => {
         "/api/wishlist/create",
         permit.context.builder,
         api.wishlist.create
+    );
+
+
+    app.get(
+        "/api/wishlist/wishlistByUserId/:id",
+        permit.context.builder,
+        api.wishlist.wishlistByUserId
     );
 
 

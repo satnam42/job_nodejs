@@ -10,7 +10,7 @@
     "webServer": {
         "url": "http://93.188.167.68:9090/",
         "port": 9090
-    },    
+    },
     "stripe": {
         "public": "",
         "private": ""
@@ -23,7 +23,7 @@
         "port": 9090
     },
     "pdf": {
-        "url": "http://93.188.167.68/projects/humanresource_node_backend/assets/files",
+        "url": "http://93.188.167.68/projects/humanresource_node_backend/assets/files/",
         "port": 9090
     },
     "providers": {},

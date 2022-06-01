@@ -16,7 +16,6 @@ const job = mongoose.Schema({
 
     priceFrom: { type: Number, required: true, default: 0, },
     priceTo: { type: Number, required: true, default: 0, },
-
     workers: { type: Number, required: true, default: 0, },
     jobType: { type: String, required: true, default: "", },
     firstName: { type: String, required: true, default: "", },
@@ -26,7 +25,6 @@ const job = mongoose.Schema({
     scopeOfWork: { type: String, required: false, trim: true, default: "" },
     planOfAction: { type: String, required: false, trim: true, default: "" },
     constructionDocumentation: { type: String, required: false, default: "" },
-
     company: {
         emailId: { type: String, required: true, trim: true, default: "" },
         experience: { type: String, required: true, trim: true, default: "" },

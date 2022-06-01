@@ -1,33 +1,18 @@
 "use strict"
 const fs = require('fs');
 const service = require("../services/apply");
- const response = require("../exchange/response");
+const response = require("../exchange/response");
+const mapper = require("../mappers/apply");
 
 
- //create job api
+//create job api
 const create = async (req, res) => {
     const log = req.context.logger.start(`api:Apply:create`);
     try {
         const Apply = await service.create(req.body, req.context);
         const message = "job apply Successfully";
         log.end();
-        return response.success(res, message ,Apply);
-    } catch (err) {
-        log.error(err);
-        log.end();
-        return response.failure(res, err.message);
-    }
-};
-
-
-// get single jobs apply api
-const getJobsApply = async (req, res) => {
-    const log = req.context.logger.start(`api:Apply:getJobApply`);
-    try {
-        const getjobsApply = await service.getJobsApply(req.params.id, req.context);
-        const message = "find single job apply";
-        log.end();
-        return response.success(res, message, getjobsApply);
+        return response.success(res, message, Apply);
     } catch (err) {
         log.error(err);
         log.end();
@@ -43,7 +28,20 @@ const getAllJobsApply = async (req, res) => {
         const applyJobs = await service.getAllJobsApply(req.body, req.context);
         const message = "find all jobs apply";
         log.end();
-        return response.success(res, message, applyJobs);
+        return response.success(res, message, mapper.toSearchModel(applyJobs));
+    } catch (err) {
+        log.error(err);
+        log.end();
+        return response.failure(res, err.message);
+    }
+};
+const listByUserId = async (req, res) => {
+    const log = req.context.logger.start(`api:Apply:listByUserId`);
+    try {
+        const applyJobs = await service.listByUserId(req.params.id, req.context);
+        const message = "find all jobs apply";
+        log.end();
+        return response.success(res, message, mapper.toSearchModel(applyJobs));
     } catch (err) {
         log.error(err);
         log.end();
@@ -68,19 +66,10 @@ const uploadDocs = async (req, res) => {
 };
 
 
-
-
-
-
-
-
-
-
-
 exports.create = create;
-exports.getJobsApply = getJobsApply;
 exports.getAllJobsApply = getAllJobsApply;
 exports.uploadDocs = uploadDocs;
+exports.listByUserId = listByUserId;
 
 
 
