@@ -7,7 +7,7 @@ const response = require("../exchange/response");
 const create = async (req, res) => {
     const log = req.context.logger.start(`api:jobs:create`);
     try {
-        const job = await service.create( req.body, req.context);
+        const job = await service.create(req.body, req.context);
         const message = "job Created Successfully";
         log.end();
         return response.success(res, message, job);
@@ -145,6 +145,19 @@ const jobsFilter = async (req, res) => {
     }
 };
 
+const search = async (req, res) => {
+    const log = req.context.logger.start(`api:jobs:search:${req.query.title}`);
+    try {
+        const jobs = await service.search(req.query.title, req.context);
+        log.end();
+        return response.data(res, jobs);
+    } catch (err) {
+        log.error(err);
+        log.end();
+        return response.failure(res, err.message);
+    }
+};
+
 
 
 const getAllLocation = async (req, res) => {
@@ -162,10 +175,6 @@ const getAllLocation = async (req, res) => {
 };
 
 
-
-
-
-
 exports.create = create;
 exports.getJobs = getJobs;
 exports.getAllJobs = getAllJobs;
@@ -176,3 +185,4 @@ exports.update = update;
 exports.deleteJobs = deleteJobs;
 exports.jobsFilter = jobsFilter;
 exports.getAllLocation = getAllLocation;
+exports.search = search;

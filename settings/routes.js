@@ -37,143 +37,142 @@ const configure = (app, logger) => {
 
             res.sendFile('index.html', { root });
         } else next();
-  });
+    });
 
 
- //job api's //
+    //job api's //
 
- app.post(
-    "/api/jobs/create",
-    permit.context.builder,
-    api.jobs.create
-);
-
-
-app.get(
-    '/api/jobs/getJobs/:id',
-    permit.context.builder,
-    api.jobs.getJobs
-);
-
-app.get(
-    '/api/jobs/getAllJobs',
-    permit.context.builder,
-    api.jobs.getAllJobs
-);
-
-app.get(
-    '/api/jobs/recentPosts',
-    permit.context.builder,
-    api.jobs.recentPosts
-);
-
-app.put(
-    "/api/jobs/uploadDocs/:id",
-    permit.context.builder,
-    api.jobs.uploadDocs
-);
-
-app.get(
-    "/api/jobs/getPopularJobs",
-    permit.context.builder,
-    api.jobs.getPopularJobs
-);
-
-app.put(
-    "/api/jobs/update/:id",
-    permit.context.builder,
-    api.jobs.update
-);
-
-app.delete(
-    "/api/jobs/deleteJobs/:id",
-    permit.context.builder,
-    api.jobs.deleteJobs
-);
-
-app.post(
-    "/api/jobs/jobsFilter",
-    permit.context.builder,
-    api.jobs.jobsFilter
-);
-
-app.get(
-    "/api/jobs/getAllLocation",
-    permit.context.builder,
-    api.jobs.getAllLocation
-);
+    app.post(
+        "/api/jobs/create",
+        permit.context.builder,
+        api.jobs.create
+    );
 
 
+    app.get(
+        '/api/jobs/getJobs/:id',
+        permit.context.builder,
+        api.jobs.getJobs
+    );
 
+    app.get(
+        '/api/jobs/getAllJobs',
+        permit.context.builder,
+        api.jobs.getAllJobs
+    );
 
-// category routes
+    app.get(
+        '/api/jobs/recentPosts',
+        permit.context.builder,
+        api.jobs.recentPosts
+    );
 
-app.post(
-    "/api/category/create",
-    permit.context.builder,
-    api.category.create
-);
+    app.put(
+        "/api/jobs/uploadDocs/:id",
+        permit.context.builder,
+        api.jobs.uploadDocs
+    );
 
+    app.get(
+        "/api/jobs/getPopularJobs",
+        permit.context.builder,
+        api.jobs.getPopularJobs
+    );
 
-app.get(
-    "/api/category/getCategory/:id",
-    permit.context.builder,
-    api.category.getCategory
-);
+    app.put(
+        "/api/jobs/update/:id",
+        permit.context.builder,
+        api.jobs.update
+    );
 
-app.get(
-    "/api/category/getAllCategory",
-    permit.context.builder,
-    api.category.getAllCategory
-);
+    app.delete(
+        "/api/jobs/deleteJobs/:id",
+        permit.context.builder,
+        api.jobs.deleteJobs
+    );
 
+    app.post(
+        "/api/jobs/jobsFilter",
+        permit.context.builder,
+        api.jobs.jobsFilter
+    );
 
-// job apply routes
-
-
-app.post(
-    "/api/Apply/create",
-    permit.context.builder,
-    api.apply.create
-);
-
-app.get(
-    "/api/Apply/getJobsApply/:id",
-    permit.context.builder,
-    api.apply.getJobsApply
-); 
-
-app.get(
-    "/api/Apply/getAllJobsApply",
-    permit.context.builder,
-    api.apply.getAllJobsApply
-);
-
-
-app.put(
-    "/api/Apply/uploadDocs/:id",
-    permit.context.builder,
-    api.apply.uploadDocs
-);
-
-
-// wishlist routes
-
-app.post(
-    "/api/wishlist/create",
-    permit.context.builder,
-    api.wishlist.create
-);
+    app.get(
+        "/api/jobs/getAllLocation",
+        permit.context.builder,
+        api.jobs.getAllLocation
+    );
+    app.get(
+        "/api/jobs/search",
+        permit.context.validateToken,
+        api.jobs.search
+    );
 
 
 
 
+    // category routes
+
+    app.post(
+        "/api/category/create",
+        permit.context.builder,
+        api.category.create
+    );
+
+
+    app.get(
+        "/api/category/getCategory/:id",
+        permit.context.builder,
+        api.category.getCategory
+    );
+
+    app.get(
+        "/api/category/getAllCategory",
+        permit.context.builder,
+        api.category.getAllCategory
+    );
+
+
+    // job apply routes
+
+
+    app.post(
+        "/api/Apply/create",
+        permit.context.builder,
+        api.apply.create
+    );
+
+    app.get(
+        "/api/Apply/getJobsApply/:id",
+        permit.context.builder,
+        api.apply.getJobsApply
+    );
+
+    app.get(
+        "/api/Apply/getAllJobsApply",
+        permit.context.builder,
+        api.apply.getAllJobsApply
+    );
+
+
+    app.put(
+        "/api/Apply/uploadDocs/:id",
+        permit.context.builder,
+        api.apply.uploadDocs
+    );
+
+
+    // wishlist routes
+
+    app.post(
+        "/api/wishlist/create",
+        permit.context.builder,
+        api.wishlist.create
+    );
 
 
 
-
-
-//     //User End Routes
+    //     //User End Routes
 
     app.post(
         "/api/users/register",
@@ -353,10 +352,10 @@ app.post(
     //     api.collections.deleteCollection
     // );
 
-    
 
 
-   
+
+
 
     log.end();
 };

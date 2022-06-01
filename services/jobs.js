@@ -281,20 +281,15 @@ const getAllLocation = async (query, context) => {
     log.end();
     return allLoc;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const search = async (title, context) => {
+    const log = context.logger.start(`services:jobs:search`);
+    if (!title) {
+        throw new Error("name is required");
+    }
+    const jobs = await db.job.find({ name: { "$regex": '.*' + title + '.*', "$options": 'i' } }).limit(5);
+    log.end()
+    return jobs
+};
 
 
 
@@ -308,3 +303,4 @@ exports.update = update;
 exports.deleteJobs = deleteJobs;
 exports.jobsFilter = jobsFilter;
 exports.getAllLocation = getAllLocation;
+exports.search = search;
