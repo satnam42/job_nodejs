@@ -116,20 +116,20 @@ module.exports = [
             summary: "uploadDocs",
             description: "uploadDocs",
             parameters: [
-            {
-                in: "formData",
-                name: "file",
-                type: "file",
-                description: " upload docs",
-                required: true
-            },
-            {
-                in: "path",
-                type: "string",
-                name: "id",
-                description: "job id",
-                required: true
-            },
+                {
+                    in: "formData",
+                    name: "file",
+                    type: "file",
+                    description: " upload docs",
+                    required: true
+                },
+                {
+                    in: "path",
+                    type: "string",
+                    name: "id",
+                    description: "job id",
+                    required: true
+                },
             ],
             responses: {
                 default: {
@@ -238,7 +238,30 @@ module.exports = [
             }
         }
     },
-
+    {
+        url: "/search",
+        get: {
+            summary: "search",
+            description: "search by title",
+            parameters: [
+                {
+                    in: 'query',
+                    type: "string",
+                    name: 'title',
+                    description: 'title',
+                    required: true,
+                }
+            ],
+            responses: {
+                default: {
+                    description: "Unexpected error",
+                    schema: {
+                        $ref: "#/definitions/Error"
+                    }
+                }
+            }
+        }
+    },
     {
         url: "/jobsFilter",
         post: {

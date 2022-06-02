@@ -40,7 +40,7 @@ const wishlistByUserId = async (id, context) => {
     if (!id) {
         throw new Error('userId is required')
     }
-    let wishlist = await db.wishlist.find({ userId: id }).populate("job");
+    let wishlist = await db.wishlist.find({ userId: id }).populate("jobId");
     if (!wishlist) {
         throw new Error('wishlist not found')
     }
