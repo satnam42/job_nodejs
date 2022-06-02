@@ -104,7 +104,7 @@ const configure = (app, logger) => {
     );
     app.get(
         "/api/jobs/search",
-        permit.context.validateToken,
+        permit.context.builder,
         api.jobs.search
     );
 
