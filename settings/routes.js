@@ -27,6 +27,7 @@ const configure = (app, logger) => {
         res.contentType("application/json");
         res.send(specs.get());
     });
+
     ////react js project setup////
     const root = path.join(__dirname, '../../lmm_angular_web/', 'dist')
 

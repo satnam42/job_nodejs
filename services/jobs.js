@@ -284,9 +284,9 @@ const getAllLocation = async (query, context) => {
 const search = async (title, context) => {
     const log = context.logger.start(`services:jobs:search`);
     if (!title) {
-        throw new Error("name is required");
+        throw new Error("title is required");
     }
-    const jobs = await db.job.find({ name: { "$regex": '.*' + title + '.*', "$options": 'i' } }).limit(5);
+    const jobs = await db.job.find({ title: { "$regex": '.*' + title + '.*', "$options": 'i' } }).limit(5);
     log.end()
     return jobs
 };
