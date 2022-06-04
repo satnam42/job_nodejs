@@ -239,23 +239,23 @@ const jobsFilter = async (Query, context) => {
     const category = Query.categoryId;
     let query = {};
 
-    if (category.length > 0) {
+    if (category && category.length > 0) {
         query.category = category;
     }
 
-    if (Query.jobType.length > 0) {
+    if (Query.jobType && Query.jobType.length > 0) {
         const jobArray = Query.jobType.split(",");
         query.jobType = [...jobArray]
     }
-    if (Query.location.length > 0) {
+    if (Query.location && Query.location.length > 0) {
         const jobloc = Query.location.split(',');
         query.location = [...jobloc]
     }
-    if (Query.priceFrom.length > 0) {
+    if (Query.priceFrom && Query.priceFrom.length > 0) {
         const prcfrom = Query.priceFrom
         query.priceFrom = Number(prcfrom)
     }
-    if (Query.priceTo.length > 0) {
+    if (Query.priceTo && Query.priceTo.length > 0) {
         const prcto = Query.priceTo
         query.priceTo = Number(prcto)
     }

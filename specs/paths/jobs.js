@@ -271,27 +271,27 @@ module.exports = [
                 {
                     in: "query",
                     name: "categoryId",
-                    required: true,
+                    required: false,
                 },
                 {
                     in: "query",
                     name: "jobType",
-                    required: true,
+                    required: false,
                 },
                 {
                     in: "query",
                     name: "location",
-                    required: true,
+                    required: false,
                 },
                 {
                     in: "query",
                     name: "priceFrom",
-                    required: true,
+                    required: false,
                 },
                 {
                     in: "query",
                     name: "priceTo",
-                    required: true,
+                    required: false,
                 },
 
 
