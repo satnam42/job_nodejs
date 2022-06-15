@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Apply = mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'user' },
     job: { type: mongoose.Schema.Types.ObjectId, ref: 'job' },
-    postedBy:{ type: mongoose.Schema.Types.ObjectId, ref: 'user' },
+    postedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'user' },
     firstName: { type: String, required: true, default: "", },
     lastName: { type: String, required: false, default: "", },
     email: { type: String, required: true, default: "", },
@@ -15,7 +15,6 @@ const Apply = mongoose.Schema({
         default: "in-process",
         enum: ["approved", "rejected", "in-process"]
     },
-
     createdOn: { type: Date, default: Date.now },
     updatedOn: { type: Date, default: Date.now },
 })

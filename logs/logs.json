@@ -2651,3 +2651,16 @@
 {"level":"debug","message":"[permit:context:builder:api:Apply:getJobApply] started","timestamp":"2022-05-04T07:27:31.454Z"}
 {"level":"debug","message":"[permit:context:builder:services:Apply:getJobsApply] started","timestamp":"2022-05-04T07:27:31.456Z"}
 {"message":"[permit:context:builder:api:Apply:getJobApply] ","stack":"CastError: Cast to ObjectId failed for value \"{id}\" (type string) at path \"user\" for model \"Apply\"\n    at model.Query.exec (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4498:21)\n    at model.Query.Query.then (C:\\Users\\Hp\\Desktop\\New folder\\humanresource_node_backend\\node_modules\\mongoose\\lib\\query.js:4592:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"{id}\"","kind":"ObjectId","value":"{id}","path":"user","reason":{},"valueType":"string","level":"error","timestamp":"2022-05-04T07:27:31.470Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-05-31T10:59:02.018Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 1.36 second(s)","timestamp":"2022-05-31T10:59:03.377Z"}
+{"level":"debug","message":"[server:settings:express:configure] started","timestamp":"2022-05-31T10:59:03.429Z"}
+{"level":"info","message":"[server:settings:express:configure] took: 0.003 second(s)","timestamp":"2022-05-31T10:59:03.432Z"}
+{"level":"debug","message":"[server:settings:routes:configure] started","timestamp":"2022-05-31T10:59:03.508Z"}
+{"level":"info","message":"[server:settings:routes:configure] took: 0.002 second(s)","timestamp":"2022-05-31T10:59:03.510Z"}
+{"level":"debug","message":"[server:app:boot] started","timestamp":"2022-05-31T10:59:03.510Z"}
+{"level":"info","message":"[server:app:boot] environment:  undefined","timestamp":"2022-05-31T10:59:03.510Z"}
+{"level":"info","message":"[server:app:boot] starting server","timestamp":"2022-05-31T10:59:03.511Z"}
+{"level":"info","message":"[server:app:boot] listening on \n    \n         : 9090","timestamp":"2022-05-31T10:59:03.514Z"}
+{"level":"info","message":"[server:app:boot] took: 0.005 second(s)","timestamp":"2022-05-31T10:59:03.515Z"}
+{"level":"debug","message":"[server:settings:database:configure] started","timestamp":"2022-06-01T09:59:47.655Z"}
+{"level":"info","message":"[server:settings:database:configure] took: 0.758 second(s)","timestamp":"2022-06-01T09:59:48.413Z"}

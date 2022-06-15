@@ -359,6 +359,7 @@ const configure = (app, logger) => {
     //     permit.context.validateToken,
     //     api.collections.deleteCollection
     // );
+    app.get('/api/messages/getOldChat', permit.context.builder, api.message.getOldChat)
 
 
 

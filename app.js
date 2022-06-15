@@ -38,7 +38,7 @@ admin.initializeApp({
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
-
+require('./communication/chat.js').sockets(server)
 const boot = () => {
   const log = logger.start("app:boot");
   log.info(`environment:  ${process.env.NODE_ENV}`);
@@ -59,6 +59,9 @@ const init = async () => {
   await require("./settings/database").configure(logger);
   await require("./settings/express").configure(app, logger);
   await require("./settings/routes").configure(app, logger);
+  app.get('/chat', function (req, res) {
+    res.sendFile(__dirname + '/templates/index.html');
+  });
   boot();
 };
 
@@ -71,4 +74,3 @@ const init = async () => {
 
 // create();
 init();
-  
